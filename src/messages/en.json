@@ -1,14 +1,21 @@
 {
   "brand": {
     "name": "FitKarma",
-    "tagline": "India's AI-powered Fitness and Wellness Ecosystem"
+    "tagline": "India's AI-powered Fitness and Wellness Ecosystem",
+    "eyebrow": "BUILT FOR INDIA. DESIGNED AROUND YOU."
   },
   "nav": {
     "features": "Features",
+    "nutrition": "Nutrition",
     "howItWorks": "How it works",
     "privacy": "Privacy",
     "faq": "FAQ",
-    "joinBeta": "Join beta"
+    "joinBeta": "Join beta",
+    "switchLanguage": "Switch to हिन्दी"
+  },
+  "announcement": {
+    "badge": "Phase 1 Beta Open",
+    "text": "Registration is open for the first 1,000 verified participants across India."
   },
   "hero": {
     "eyebrow": "BUILT FOR INDIA. DESIGNED AROUND YOU.",
@@ -18,16 +25,222 @@
     "secondaryCta": "Explore FitKarma",
     "supportingNote": "Phase 1 is limited to 1,000 verified beta registrations. Additional verified applicants can join the Phase 2 waitlist."
   },
+  "trustStrip": {
+    "items": [
+      { "title": "500+ Indian Dishes", "desc": "Authentic regional foods & household measures" },
+      { "title": "Daily Intelligence (DIP)", "desc": "Contextual advice cutting through dashboard noise" },
+      { "title": "Connected Health Rails", "desc": "Health Connect & Apple Health data integration" },
+      { "title": "Family-Aware Care", "desc": "Affirmative consent-based wellbeing sharing" }
+    ]
+  },
+  "problemSolution": {
+    "eyebrow": "CULTURAL HEALTH INTELLIGENCE",
+    "title": "Why Health Tracking in India Needs a Re-imagining",
+    "description": "Most fitness apps are designed for Western meals, kitchen scales, and solitary tracking. FitKarma is built from the ground up for how Indian households actually live, eat, and stay healthy.",
+    "traditionalTitle": "Conventional Tracking Apps",
+    "traditionalItems": [
+      "Databases dominated by foreign foods, lacking regional Indian preparations",
+      "Rigid gram measurements that don't fit household katoris, rotis, or shared pots",
+      "Overwhelming raw data charts without practical daily next steps",
+      "Isolated single-user accounts with zero awareness of family health care"
+    ],
+    "fitkarmaTitle": "The FitKarma Ecosystem",
+    "fitkarmaItems": [
+      "500+ seeded regional recipes, Indian home cooking, street food, and festival specialties",
+      "Familiar household portion units (katori, roti count, spoon, piece, and family recipe splitter)",
+      "Daily Intelligence Package (DIP) highlighting the single most meaningful next step",
+      "Consent-first family care dashboard designed for real Indian household support"
+    ]
+  },
+  "bento": {
+    "eyebrow": "CORE CAPABILITIES",
+    "title": "An Ecosystem Engineered for Real Life",
+    "subtitle": "Discover features crafted specifically for Indian nutrition, flexible routines, and connected health.",
+    "cards": {
+      "nutrition": {
+        "title": "India-First Nutrition",
+        "description": "From everyday dal and roti to regional favourites, FitKarma is designed around the way India actually eats—with familiar portions and meal context.",
+        "highlight": "Katori, piece, roti & spoon units"
+      },
+      "dip": {
+        "title": "Daily Intelligence Package (DIP)",
+        "description": "Less dashboard noise. More useful context. A daily view that brings forward the health signals and next steps that matter most.",
+        "highlight": "Morning & evening intelligent briefs"
+      },
+      "logging": {
+        "title": "Flexible & Low-Friction Logging",
+        "description": "Make tracking fit your day—with simple in-app flows, offline-first foundations and conversational experiences as they roll out.",
+        "highlight": "In-app and conversational workflows"
+      },
+      "offline": {
+        "title": "Offline-First Foundation",
+        "description": "Log seamlessly whether you are on a morning commute, in a lower-bandwidth area, or offline. Syncs reliably when connection returns.",
+        "highlight": "Local-first storage & auto-sync"
+      },
+      "connected": {
+        "title": "Connected Health Integrations",
+        "description": "Bring supported health data together through platform integrations such as Android Health Connect and Apple Health, with clear permissions.",
+        "highlight": "OS-level health rails connectivity"
+      },
+      "family": {
+        "title": "Family-Aware Wellness",
+        "description": "Support shared wellbeing with consent-first family tools and controls designed around the people you choose to care for.",
+        "highlight": "Affirmative consent & revocation"
+      }
+    }
+  },
+  "nutritionShowcase": {
+    "eyebrow": "NUTRITION WITHOUT FRICTION",
+    "title": "Familiar Household Portions, Zero Food Guilt",
+    "description": "You shouldn't need a precision scale to log a bowl of homemade dal or warm rotis. FitKarma speaks the language of Indian kitchens.",
+    "features": [
+      {
+        "title": "Household Portions",
+        "desc": "Log using standard katoris, glasses, spoons, and piece counts instead of arbitrary grams."
+      },
+      {
+        "title": "Family Recipe Splitter",
+        "desc": "Enter total ingredients cooked for the home, and slide to your exact percentage consumed."
+      },
+      {
+        "title": "Tadka & Oil Slider",
+        "desc": "Adjust tempering levels from light to rich ghee/oil for authentic calorie estimation."
+      },
+      {
+        "title": "Raw vs Cooked Context",
+        "desc": "Accounts for cooking yields automatically so dal and rice calculations stay realistic."
+      }
+    ],
+    "demo": {
+      "title": "Interactive Portion Demo",
+      "dish": "Yellow Moong Dal Tadka",
+      "portion": "1 Standard Katori (approx. 150ml)",
+      "oil": "Medium Ghee Tadka (1 tsp)",
+      "protein": "Approx. 8.5g Protein",
+      "energy": "Approx. 165 kcal",
+      "note": "Illustrative estimate based on regional recipe benchmarks."
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "HOW FITKARMA WORKS",
+    "title": "From Daily Tracking to Lasting Wellbeing",
+    "subtitle": "A calm, consistent 3-step cycle designed to guide your everyday routine without fatigue.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Log Meals and Activity In Seconds",
+        "desc": "Track your nutrition using familiar household measures or conversational flows. Supported wearable and OS health metrics sync in the background with explicit permissions."
+      },
+      {
+        "number": "02",
+        "title": "Receive Contextual Intelligence",
+        "desc": "Every day, FitKarma synthesizes your nutrition, recovery, and movement into your Daily Intelligence Package (DIP)—surfacing the single next step that matters most."
+      },
+      {
+        "number": "03",
+        "title": "Sustain Healthy Habits Over Time",
+        "desc": "Support loved ones through affirmative family circles, adapt to fasting and festival periods, and build progressive health momentum at your own pace."
+      }
+    ]
+  },
+  "privacySection": {
+    "eyebrow": "DATA GOVERNANCE & INTEGRITY",
+    "title": "Your Health Data Belongs to You",
+    "description": "FitKarma is designed on privacy-by-design principles. We collect only what is strictly required for the beta programme, and we never sell your personal information.",
+    "pillars": [
+      {
+        "title": "Data Minimisation",
+        "desc": "Our beta signup collects only your name, email, and feature priorities. No medical history, diagnosis, weight, or phone numbers."
+      },
+      {
+        "title": "Affirmative Consent",
+        "desc": "Clear terms with explicit, un-ticked marketing checkboxes. You are never forced to accept promotional emails to join the beta."
+      },
+      {
+        "title": "India DPDP Alignment",
+        "desc": "Engineered around the data fiduciary and grievance principles of India's Digital Personal Data Protection regulatory framework."
+      },
+      {
+        "title": "Clear Medical Boundaries",
+        "desc": "FitKarma is an intelligent wellness and fitness assistant. It does not provide medical diagnoses, treatment advice, or emergency clinical care."
+      }
+    ],
+    "readNotice": "Read the complete Privacy Notice"
+  },
+  "betaSection": {
+    "eyebrow": "FIRST-COME, FIRST-SERVED",
+    "heading": "Be part of the first 1,000.",
+    "body": "Join the FitKarma beta programme and help shape an India-first health and wellness experience. Phase 1 places are allocated first-come, first-served after email verification. Once the 1,000 places are filled, new verified applicants can join the Phase 2 waitlist.",
+    "cta": "Apply for beta access",
+    "capacityLabel": "Maximum 1,000 verified Phase 1 places",
+    "waitlistNote": "Subsequent verified applicants enter the Phase 2 waitlist automatically.",
+    "guarantee": "Strict server-side atomic seat allocation. No unverified place reservations."
+  },
+  "faq": {
+    "eyebrow": "TRANSPARENT ANSWERS",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "What is FitKarma?",
+        "a": "FitKarma is India's AI-powered Fitness and Wellness Ecosystem. It brings Indian nutrition, movement, recovery, and family-aware wellness together into one personal, intelligent experience."
+      },
+      {
+        "q": "Who can apply for the beta?",
+        "a": "Anyone in India interested in an India-first approach to health and wellness can apply. Tier-1 professionals, college students, home cooks, and families managing household health are all welcome."
+      },
+      {
+        "q": "How are the first 1,000 places allocated?",
+        "a": "Places are allocated strictly first-come, first-served in the order that applicants successfully verify their email address via our atomic database transaction. An unverified submission does not hold a seat."
+      },
+      {
+        "q": "What happens when Phase 1 is full?",
+        "a": "Once all 1,000 Phase 1 places have been allocated to verified participants, subsequent verified applicants are automatically placed on the Phase 2 waitlist."
+      },
+      {
+        "q": "Do I need to pay to apply for the beta?",
+        "a": "No. Applying for and participating in the Phase 1 beta programme is completely free. Commercial subscription plans (such as Yogi Free and Karma Pro) will only be introduced in subsequent stages."
+      },
+      {
+        "q": "Which devices will be supported?",
+        "a": "The FitKarma mobile application is built for Android and iOS devices. You can indicate your preferred device platform during the registration step."
+      },
+      {
+        "q": "Will every feature be available on the first day?",
+        "a": "No. The entire documented feature inventory is part of the beta programme, but capabilities will be rolled out progressively in staged releases to ensure stability, accuracy, and user safety."
+      },
+      {
+        "q": "How will FitKarma contact me?",
+        "a": "Email is our only communication channel. We will never send you unsolicited WhatsApp messages, SMS messages, or phone calls regarding your beta application."
+      },
+      {
+        "q": "What information do you collect during registration?",
+        "a": "We practice strict data minimisation: we only collect your name, email address, primary feature interest, and optional platform/language preference. We do not collect phone numbers, health metrics, or medical data."
+      },
+      {
+        "q": "How can I withdraw my application or request deletion?",
+        "a": "You can withdraw your application or request deletion of your information at any time by contacting our support team at sulekhniwal@gmail.com."
+      },
+      {
+        "q": "Is FitKarma a medical service?",
+        "a": "No. FitKarma is a fitness, nutrition, and wellness intelligence assistant. It is not a clinical service, does not diagnose or treat medical conditions, and should not replace advice from certified healthcare professionals."
+      }
+    ]
+  },
   "status": {
-    "phase1Places": "Phase 1 places claimed",
+    "inBeta": "In beta",
+    "rollingOut": "Rolling out during beta",
+    "planned": "Planned within the beta programme",
     "verifiedSeats": "Verified seats allocated",
     "limitedCohort": "Limited first cohort: 1,000 verified participants"
   },
   "footer": {
-    "copyright": "© {year} FitKarma. All rights reserved.",
+    "tagline": "India's AI-powered Fitness and Wellness Ecosystem",
+    "features": "Features",
+    "nutrition": "Indian Nutrition",
+    "howItWorks": "How it works",
     "privacyNotice": "Privacy Notice",
     "betaTerms": "Beta Terms",
-    "contact": "Contact: sulekhniwal@gmail.com"
+    "contact": "Contact: sulekhniwal@gmail.com",
+    "copyright": "© {year} FitKarma. All rights reserved."
   }
 }
-
