@@ -1,0 +1,33 @@
+{
+  "brand": {
+    "name": "FitKarma",
+    "tagline": "भारत का AI-संचालित Fitness और Wellness Ecosystem"
+  },
+  "nav": {
+    "features": "सुविधाएँ",
+    "howItWorks": "यह कैसे काम करता है",
+    "privacy": "गोपनीयता",
+    "faq": "अक्सर पूछे जाने वाले सवाल",
+    "joinBeta": "बीटा में शामिल हों"
+  },
+  "hero": {
+    "eyebrow": "भारत के लिए बना। आपकी ज़िंदगी के अनुसार।",
+    "headline": "आपकी सेहत, एक जुड़ा हुआ अनुभव। आपकी प्रगति, आपके अनुसार।",
+    "subheadline": "पेश है FitKarma — भारत का AI-संचालित Fitness और Wellness Ecosystem। पोषण, गतिविधि, रिकवरी और रोज़मर्रा की सेहत को एक अधिक व्यक्तिगत अनुभव में जोड़ें।",
+    "primaryCta": "बीटा में शामिल हों",
+    "secondaryCta": "FitKarma को जानें",
+    "supportingNote": "पहले चरण में ईमेल सत्यापन के बाद अधिकतम 1,000 बीटा स्थान उपलब्ध हैं। इसके बाद आवेदन करने वाले लोग दूसरे चरण की प्रतीक्षा सूची में शामिल हो सकते हैं।"
+  },
+  "status": {
+    "phase1Places": "Phase 1 स्थान सुरक्षित",
+    "verifiedSeats": "सत्यापित सीटें आवंटित",
+    "limitedCohort": "सीमित पहला समूह: 1,000 सत्यापित प्रतिभागी"
+  },
+  "footer": {
+    "copyright": "© {year} FitKarma. सर्वाधिकार सुरक्षित।",
+    "privacyNotice": "गोपनीयता नीति",
+    "betaTerms": "बीटा नियम व शर्तें",
+    "contact": "संपर्क: sulekhniwal@gmail.com"
+  }
+}
+

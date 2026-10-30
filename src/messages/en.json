@@ -1,0 +1,33 @@
+{
+  "brand": {
+    "name": "FitKarma",
+    "tagline": "India's AI-powered Fitness and Wellness Ecosystem"
+  },
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How it works",
+    "privacy": "Privacy",
+    "faq": "FAQ",
+    "joinBeta": "Join beta"
+  },
+  "hero": {
+    "eyebrow": "BUILT FOR INDIA. DESIGNED AROUND YOU.",
+    "headline": "Your health, connected. Your progress, personal.",
+    "subheadline": "Meet FitKarma — India's AI-powered Fitness and Wellness Ecosystem. Bring nutrition, movement, recovery and everyday wellness into one smarter, more personal experience.",
+    "primaryCta": "Join the beta",
+    "secondaryCta": "Explore FitKarma",
+    "supportingNote": "Phase 1 is limited to 1,000 verified beta registrations. Additional verified applicants can join the Phase 2 waitlist."
+  },
+  "status": {
+    "phase1Places": "Phase 1 places claimed",
+    "verifiedSeats": "Verified seats allocated",
+    "limitedCohort": "Limited first cohort: 1,000 verified participants"
+  },
+  "footer": {
+    "copyright": "© {year} FitKarma. All rights reserved.",
+    "privacyNotice": "Privacy Notice",
+    "betaTerms": "Beta Terms",
+    "contact": "Contact: sulekhniwal@gmail.com"
+  }
+}
+

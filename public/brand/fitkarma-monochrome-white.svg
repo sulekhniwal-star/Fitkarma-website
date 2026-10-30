@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="300" viewBox="0 0 1120 300" role="img" aria-label="FitKarma logo">
+<defs>
+      <linearGradient id="greenGrad" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0%" stop-color="#16A34A"/>
+        <stop offset="52%" stop-color="#36C96A"/>
+        <stop offset="100%" stop-color="#A3E635"/>
+      </linearGradient>
+      <linearGradient id="goldGrad" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0%" stop-color="#B98528"/>
+        <stop offset="52%" stop-color="#D6A84B"/>
+        <stop offset="100%" stop-color="#F4D477"/>
+      </linearGradient>
+    </defs>
+
+<g transform="translate(36 35) scale(2.25)">
+  <circle cx="70" cy="14" r="8.4" fill="#FFFFFF"/>
+  <!-- Forward-reaching upper body / arm -->
+  <path d="M63.7 27.5 C73.8 29.1 84.2 27.2 95.3 21.8 C91.7 32.5 82.1 40.2 69.7 44.0 C59.3 47.2 50.2 53.1 42.7 61.8 C34.5 71.4 25.2 83.4 10.2 91.4 C15.5 76.0 23.0 62.8 33.7 51.7 C42.3 42.8 52.6 34.1 63.7 27.5 Z" fill="#FFFFFF"/>
+  <!-- Striding front leg -->
+  <path d="M47.0 53.4 C55.4 55.4 62.1 60.0 68.0 67.0 L91.1 93.6 C93.1 95.8 91.5 98.0 88.2 98.0 L75.4 98.0 C73.4 98.0 71.7 97.1 70.3 95.5 L49.1 70.8 L39.7 63.3 Z" fill="#FFFFFF"/>
+</g>
+    <text x="330" y="194" font-family="Inter, Montserrat, Arial, sans-serif" font-size="122" font-weight="700" letter-spacing="-4" fill="#FFFFFF">FitKarma</text>
+</svg>

@@ -1,0 +1,36 @@
+{
+  "project": "FitKarma Pre-launch Website Specification",
+  "version": "1.0",
+  "prepared": "2026-10-30",
+  "files": [
+    ".agents/rules/content-and-brand.md",
+    ".agents/rules/database-security.md",
+    ".agents/rules/quality-gates.md",
+    ".env.example",
+    "AGENTS.md",
+    "README.md",
+    "antigravity/START_HERE_PROMPT.md",
+    "docs/00_DECISION_REGISTER.md",
+    "docs/01_PRODUCT_BRIEF.md",
+    "docs/02_REQUIREMENTS_AND_SCOPE.md",
+    "docs/03_SITEMAP_AND_COPY.md",
+    "docs/04_DESIGN_SYSTEM.md",
+    "docs/05_USER_FLOWS.md",
+    "docs/06_TECHNICAL_ARCHITECTURE.md",
+    "docs/07_DATA_MODEL_AND_API.md",
+    "docs/08_SECURITY_PRIVACY_AND_LEGAL.md",
+    "docs/09_CONTENT_SEO_AND_LOCALISATION.md",
+    "docs/10_TESTING_AND_ACCEPTANCE.md",
+    "docs/11_DEPLOYMENT_AND_OPERATIONS.md",
+    "docs/12_IMPLEMENTATION_PLAN.md",
+    "docs/13_LOGO_BRIEF.md",
+    "docs/14_EMAIL_TEMPLATES.md",
+    "docs/15_IMPLEMENTATION_REFERENCES.md"
+  ],
+  "notes": [
+    "Approved owner decisions are recorded in docs/00_DECISION_REGISTER.md.",
+    "This is a specification package, not an implemented website or legal opinion.",
+    "Open items must be approved before production data collection.",
+    "The full documented app capability inventory is intended for staged availability during the beta programme; not all capabilities are represented as live on day one."
+  ]
+}
