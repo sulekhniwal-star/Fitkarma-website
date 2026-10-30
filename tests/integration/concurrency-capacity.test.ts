@@ -179,3 +179,4 @@ describe("FitKarma Phase 1 Beta — Concurrency & Capacity Integration Test", ()
     console.log("✅ Decision D-029 Auto-promotion passed: earliest waitlist entry promoted upon withdrawal.");
   });
 });
+

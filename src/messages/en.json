@@ -242,5 +242,47 @@
     "betaTerms": "Beta Terms",
     "contact": "Contact: sulekhniwal@gmail.com",
     "copyright": "© {year} FitKarma. All rights reserved."
+  },
+  "admin": {
+    "title": "FitKarma Operations & Governance",
+    "nav": {
+      "dashboard": "Dashboard",
+      "applicants": "Applicants",
+      "campaigns": "Campaigns",
+      "logout": "Sign Out",
+      "publicSite": "Public Site"
+    },
+    "login": {
+      "title": "Operator Sign In",
+      "subtitle": "Authorized FitKarma administrators and operations team only.",
+      "emailLabel": "Administrator Email",
+      "button": "Sign In to Admin Console",
+      "unauthorized": "Email is not in the authorized ADMIN_EMAIL_ALLOWLIST."
+    },
+    "metrics": {
+      "phase1": "Phase 1 Beta Allocation",
+      "waitlist": "Phase 2 Waitlist",
+      "pending": "Pending Verification",
+      "total": "Total Applications",
+      "featureDemand": "Primary Feature Demand",
+      "outboxHealth": "Email Outbox Health"
+    },
+    "applicants": {
+      "title": "Beta Applications & Capacity Management",
+      "searchPlaceholder": "Search by name, email, or seat #...",
+      "withdrawButton": "Withdraw Seat",
+      "exportButton": "Guarded Export (CSV)",
+      "filterAll": "All",
+      "filterPhase1": "Phase 1 Accepted",
+      "filterWaitlist": "Phase 2 Waitlist",
+      "filterPending": "Pending Verification"
+    },
+    "campaigns": {
+      "title": "Phase 2 Community Share Campaign",
+      "dryRunBadge": "Dry Run Mode Active",
+      "dispatchButton": "Execute Dispatch",
+      "previewTabEn": "English Template",
+      "previewTabHi": "Hindi Template"
+    }
   }
 }

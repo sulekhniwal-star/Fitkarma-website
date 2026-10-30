@@ -23,3 +23,4 @@ export interface SendEmailResult {
 export interface EmailAdapter {
   send(options: SendEmailOptions): Promise<SendEmailResult>;
 }
+

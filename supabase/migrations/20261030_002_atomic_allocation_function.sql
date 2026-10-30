@@ -342,3 +342,4 @@ BEGIN
     RETURN QUERY SELECT p_application_id, NULL::UUID, NULL::INTEGER;
 END;
 $$;
+

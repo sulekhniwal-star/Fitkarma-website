@@ -72,3 +72,4 @@ export const applicationSchema = z.object({
 });
 
 export type ApplicationInput = z.infer<typeof applicationSchema>;
+

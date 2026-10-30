@@ -302,6 +302,113 @@ export class InMemoryStore {
       release();
     }
   }
+
+  // Admin metrics calculation
+  getMetrics() {
+    const apps = Array.from(this.applications.values());
+    const phase1Accepted = apps.filter((a) => a.status === "phase1_accepted").length;
+    const phase2Waitlist = apps.filter((a) => a.status === "phase2_waitlist").length;
+    const pendingVerification = apps.filter((a) => a.status === "pending_email_verification").length;
+    const withdrawn = apps.filter((a) => a.status === "withdrawn").length;
+    const phase1 = this.phases.get("phase1");
+    const phase1Capacity = phase1?.capacity || 1000;
+
+    const featureCounts: Record<string, number> = {};
+    const platformCounts: Record<string, number> = { android: 0, ios: 0, both: 0, not_sure: 0 };
+    const languageCounts: Record<string, number> = { en: 0, hi: 0 };
+
+    for (const a of apps) {
+      for (const feat of a.primaryFeatureInterests) {
+        featureCounts[feat] = (featureCounts[feat] || 0) + 1;
+      }
+      if (a.devicePlatform) {
+        platformCounts[a.devicePlatform] = (platformCounts[a.devicePlatform] || 0) + 1;
+      }
+      if (a.preferredLanguage) {
+        languageCounts[a.preferredLanguage] = (languageCounts[a.preferredLanguage] || 0) + 1;
+      }
+    }
+
+    const outboxPending = this.outbox.filter((o) => o.status === "pending").length;
+    const outboxSent = this.outbox.filter((o) => o.status === "sent").length;
+    const outboxFailed = this.outbox.filter((o) => o.status === "failed").length;
+
+    return {
+      phase1Accepted,
+      phase1Capacity,
+      phase2Waitlist,
+      pendingVerification,
+      withdrawn,
+      totalApplications: apps.length,
+      featureCounts,
+      platformCounts,
+      languageCounts,
+      outboxStats: {
+        pending: outboxPending,
+        sent: outboxSent,
+        failed: outboxFailed,
+      },
+    };
+  }
+
+  // Admin query applicants with search & pagination
+  getApplicants(options?: {
+    status?: string;
+    search?: string;
+    page?: number;
+    limit?: number;
+  }) {
+    let list = Array.from(this.applications.values());
+
+    if (options?.status && options.status !== "all") {
+      list = list.filter((a) => a.status === options.status);
+    }
+
+    if (options?.search) {
+      const q = options.search.toLowerCase().trim();
+      list = list.filter(
+        (a) =>
+          a.fullName.toLowerCase().includes(q) ||
+          a.email.toLowerCase().includes(q) ||
+          (a.seatNumber && a.seatNumber.toString() === q)
+      );
+    }
+
+    // Sort by seat number if accepted, or created_at desc
+    list.sort((a, b) => {
+      if (a.seatNumber && b.seatNumber) return a.seatNumber - b.seatNumber;
+      if (a.seatNumber) return -1;
+      if (b.seatNumber) return 1;
+      return b.createdAt.getTime() - a.createdAt.getTime();
+    });
+
+    const page = options?.page || 1;
+    const limit = options?.limit || 25;
+    const total = list.length;
+    const paginated = list.slice((page - 1) * limit, page * limit);
+
+    return {
+      data: paginated.map((a) => ({
+        id: a.id,
+        fullName: a.fullName,
+        email: a.email,
+        status: a.status,
+        seatNumber: a.seatNumber,
+        primaryFeatureInterests: a.primaryFeatureInterests,
+        devicePlatform: a.devicePlatform,
+        preferredLanguage: a.preferredLanguage,
+        marketingConsent: a.marketingConsent,
+        emailVerifiedAt: a.emailVerifiedAt ? a.emailVerifiedAt.toISOString() : null,
+        createdAt: a.createdAt.toISOString(),
+      })),
+      pagination: {
+        page,
+        limit,
+        total,
+        totalPages: Math.ceil(total / limit) || 1,
+      },
+    };
+  }
 }
 
 export const inMemoryStore = new InMemoryStore();

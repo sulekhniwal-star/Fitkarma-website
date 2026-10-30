@@ -242,5 +242,47 @@
     "betaTerms": "बीटा नियम व शर्तें",
     "contact": "संपर्क: sulekhniwal@gmail.com",
     "copyright": "© {year} FitKarma. सर्वाधिकार सुरक्षित।"
+  },
+  "admin": {
+    "title": "FitKarma संचालन एवं प्रशासन",
+    "nav": {
+      "dashboard": "डैशबोर्ड",
+      "applicants": "आवेदक",
+      "campaigns": "अभियान",
+      "logout": "लॉग आउट",
+      "publicSite": "मुख्य वेबसाइट"
+    },
+    "login": {
+      "title": "ऑपरेटर लॉगिन",
+      "subtitle": "केवल अधिकृत FitKarma प्रशासकों और संचालन टीम के लिए।",
+      "emailLabel": "प्रशासक ईमेल",
+      "button": "व्यवस्थापक कंसोल में प्रवेश करें",
+      "unauthorized": "ईमेल अधिकृत ADMIN_EMAIL_ALLOWLIST में मौजूद नहीं है।"
+    },
+    "metrics": {
+      "phase1": "Phase 1 बीटा सीट आवंटन",
+      "waitlist": "Phase 2 प्रतीक्षा सूची",
+      "pending": "लंबित सत्यापन",
+      "total": "कुल आवेदन",
+      "featureDemand": "मुख्य सुविधाओं की मांग",
+      "outboxHealth": "ईमेल प्रेषण स्थिति"
+    },
+    "applicants": {
+      "title": "बीटा आवेदन एवं क्षमता प्रबंधन",
+      "searchPlaceholder": "नाम, ईमेल या सीट संख्या से खोजें...",
+      "withdrawButton": "सीट वापस लें",
+      "exportButton": "सुरक्षित निर्यात (CSV)",
+      "filterAll": "सभी",
+      "filterPhase1": "Phase 1 स्वीकृत",
+      "filterWaitlist": "Phase 2 प्रतीक्षा सूची",
+      "filterPending": "लंबित सत्यापन"
+    },
+    "campaigns": {
+      "title": "Phase 2 आमंत्रण अभियान",
+      "dryRunBadge": "ड्राय रन मोड सक्रिय",
+      "dispatchButton": "अभियान प्रेषण शुरू करें",
+      "previewTabEn": "अंग्रेजी टेम्पलेट",
+      "previewTabHi": "हिन्दी टेम्पलेट"
+    }
   }
 }

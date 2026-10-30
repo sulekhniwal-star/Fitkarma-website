@@ -6,3 +6,4 @@ const supabaseUrl = env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabas
 const supabaseAnonKey = env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder_anon_key";
 
 export const supabaseBrowserClient = createClient<Database>(supabaseUrl, supabaseAnonKey);
+

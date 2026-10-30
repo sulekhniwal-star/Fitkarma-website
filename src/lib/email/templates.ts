@@ -158,3 +158,57 @@ export function renderPhase2WaitlistEmail({
 
   return { subject, html, text };
 }
+
+export interface Phase2ShareInvitationProps {
+  name: string;
+  phase2PublicUrl: string;
+  locale: Locale;
+}
+
+export function renderPhase2ShareInvitationEmail({
+  name,
+  phase2PublicUrl,
+  locale,
+}: Phase2ShareInvitationProps): { subject: string; html: string; text: string } {
+  const safeName = escapeHtml(name || "there");
+  const isHindi = locale === "hi";
+
+  const subject = isHindi
+    ? "FitKarma को और लोगों तक पहुँचाएँ — Phase 2 शुरू हो रहा है"
+    : "Help more people discover FitKarma — Phase 2 is opening";
+
+  const text = isHindi
+    ? `नमस्ते ${safeName},\n\nFitKarma के पहले बीटा समूह का हिस्सा बनने के लिए धन्यवाद। अब हम कार्यक्रम का अगला चरण शुरू कर रहे हैं।\n\nजो मित्र या परिवारजन FitKarma से जुड़ना चाहते हैं, उनके साथ यह आवेदन लिंक साझा कर सकते हैं:\n\n${phase2PublicUrl}\n\nहर आवेदक को अपना आवेदन और ईमेल सत्यापन पूरा करना होगा। सीमित स्थान होने पर आवंटन Phase 2 के घोषित नियमों के अनुसार होगा।\n\nभारत के लिए बेहतर health और wellness अनुभव बनाने में मदद के लिए धन्यवाद।\n\n— FitKarma टीम`
+    : `Hi ${safeName},\n\nThank you for being part of the first FitKarma beta cohort. We're opening the next phase of the programme.\n\nYou can share this application link with friends or family who may want to join:\n\n${phase2PublicUrl}\n\nEach applicant must complete their own application and email verification. Places, if limited, will be allocated under the published Phase 2 rules.\n\nThank you for helping us build a better health and wellness experience for India.\n\n— Team FitKarma`;
+
+  const html = `
+    <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #0D0F12; color: #F8FAFC; padding: 40px 20px; max-width: 600px; margin: 0 auto; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);">
+      <div style="margin-bottom: 24px;">
+        <span style="font-size: 24px; font-weight: bold; color: #FFFFFF;">Fit<span style="color: #65C94B;">Karma</span></span>
+      </div>
+      <h1 style="font-size: 20px; font-weight: 700; color: #FFFFFF; margin-bottom: 16px;">${subject}</h1>
+      <p style="font-size: 15px; line-height: 1.6; color: #94A3B8; margin-bottom: 20px;">
+        ${isHindi ? `नमस्ते ${safeName},` : `Hi ${safeName},`}<br/><br/>
+        ${isHindi
+          ? "FitKarma के पहले बीटा समूह का हिस्सा बनने के लिए धन्यवाद। अब हम कार्यक्रम का अगला चरण शुरू कर रहे हैं।"
+          : "Thank you for being part of the first FitKarma beta cohort. We're opening the next phase of the programme."}
+      </p>
+      <div style="background-color: #14181D; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 16px 20px; margin-bottom: 24px;">
+        <span style="font-size: 12px; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px;">Phase 2 Application Link</span>
+        <div style="margin-top: 8px;">
+          <a href="${phase2PublicUrl}" style="color: #65C94B; font-weight: 600; text-decoration: underline; word-break: break-all;">${phase2PublicUrl}</a>
+        </div>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; color: #94A3B8; margin-bottom: 24px;">
+        ${isHindi
+          ? "हर आवेदक को अपना आवेदन और ईमेल सत्यापन पूरा करना होगा। सीमित स्थान होने पर आवंटन Phase 2 के घोषित नियमों के अनुसार होगा। भारत के लिए बेहतर health और wellness अनुभव बनाने में मदद के लिए धन्यवाद।"
+          : "Each applicant must complete their own application and email verification. Places, if limited, will be allocated under the published Phase 2 rules. Thank you for helping us build a better health and wellness experience for India."}
+      </p>
+      <p style="font-size: 13px; color: #64748B; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 16px;">
+        — ${isHindi ? "FitKarma टीम" : "Team FitKarma"}
+      </p>
+    </div>
+  `;
+
+  return { subject, html, text };
+}
