@@ -1,8 +1,8 @@
 import React from "react";
-import Link from "next/link";
 import { Locale } from "@/i18n/config";
 import { Messages } from "@/i18n/get-messages";
-import { ArrowRightIcon, ShieldCheckIcon, SparklesIcon } from "@/components/ui/icons";
+import { ShieldCheckIcon, SparklesIcon } from "@/components/ui/icons";
+import { BetaRegistrationForm } from "./beta-registration-form";
 
 interface BetaCapacitySectionProps {
   locale: Locale;
@@ -14,9 +14,9 @@ export function BetaCapacitySection({ locale, messages }: BetaCapacitySectionPro
 
   return (
     <section id="beta" className="py-24 px-4 sm:px-6 lg:px-8 border-b border-fk-border relative overflow-hidden">
-      {/* Glow background */}
+      {/* Ambient background glow */}
       <div
-        className="pointer-events-none absolute top-1/2 left-1/2 h-[450px] w-[450px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-primary/10 blur-[130px]"
+        className="pointer-events-none absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-primary/10 blur-[140px]"
         aria-hidden="true"
       />
 
@@ -35,8 +35,8 @@ export function BetaCapacitySection({ locale, messages }: BetaCapacitySectionPro
         </p>
 
         {/* Capacity Highlights */}
-        <div className="mt-10 mx-auto max-w-lg rounded-2xl border border-fk-border bg-surface-1/80 p-6 backdrop-blur-md">
-          <div className="flex items-center justify-between border-b border-fk-border/60 pb-4">
+        <div className="mt-8 mb-12 mx-auto max-w-lg rounded-2xl border border-fk-border bg-surface-1/80 p-5 backdrop-blur-md">
+          <div className="flex items-center justify-between border-b border-fk-border/60 pb-3">
             <span className="text-xs font-medium text-fk-textSecondary">
               Phase 1 Capacity Ceiling
             </span>
@@ -45,7 +45,7 @@ export function BetaCapacitySection({ locale, messages }: BetaCapacitySectionPro
             </span>
           </div>
 
-          <div className="flex items-center justify-between pt-4">
+          <div className="flex items-center justify-between pt-3">
             <span className="text-xs font-medium text-fk-textSecondary">
               Ordering Rule
             </span>
@@ -54,7 +54,7 @@ export function BetaCapacitySection({ locale, messages }: BetaCapacitySectionPro
             </span>
           </div>
 
-          <div className="mt-4 pt-3 border-t border-fk-border/40 text-left">
+          <div className="mt-3 pt-3 border-t border-fk-border/40 text-left">
             <p className="text-[11px] text-fk-textMuted flex items-start gap-1.5">
               <ShieldCheckIcon className="h-3.5 w-3.5 text-brand-gold flex-shrink-0 mt-0.5" />
               <span>{betaSection.guarantee}</span>
@@ -62,21 +62,9 @@ export function BetaCapacitySection({ locale, messages }: BetaCapacitySectionPro
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="mt-10 flex flex-col items-center justify-center gap-4">
-          <Link
-            href={`/${locale}#beta`}
-            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-brand-primary px-9 py-4 text-sm font-semibold text-canvas shadow-xl shadow-brand-primary/25 transition-all hover:bg-brand-primary/95 hover:scale-[1.02] active:scale-[0.98]"
-          >
-            <span>{betaSection.cta}</span>
-            <ArrowRightIcon className="h-4 w-4" />
-          </Link>
-          <span className="text-xs text-fk-textMuted">
-            {betaSection.waitlistNote}
-          </span>
-        </div>
+        {/* Interactive Beta Application Form */}
+        <BetaRegistrationForm locale={locale} messages={messages} />
       </div>
     </section>
   );
 }
-
