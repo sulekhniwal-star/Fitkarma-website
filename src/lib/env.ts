@@ -6,6 +6,7 @@ const envSchema = z.object({
   NEXT_PUBLIC_SUPABASE_URL: z.string().optional().default(""),
   NEXT_PUBLIC_SUPABASE_ANON_KEY: z.string().optional().default(""),
   NEXT_PUBLIC_ANALYTICS_DOMAIN: z.string().optional().default(""),
+  NEXT_PUBLIC_REGISTRATION_OPEN: z.enum(["true", "false"]).default("true"),
 
   // Server-only secrets
   SUPABASE_SERVICE_ROLE_KEY: z.string().optional().default(""),

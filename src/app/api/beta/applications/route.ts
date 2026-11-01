@@ -36,6 +36,14 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // 0. Check Registration Gate Flag
+    if (env.NEXT_PUBLIC_REGISTRATION_OPEN === "false") {
+      return NextResponse.json(
+        { error: "Beta registration is currently paused for a scheduled cohort review. Please check back shortly." },
+        { status: 403 }
+      );
+    }
+
     const body = await request.json();
 
     // 1. Validate with Zod
