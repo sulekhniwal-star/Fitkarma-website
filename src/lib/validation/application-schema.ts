@@ -57,12 +57,12 @@ export const applicationSchema = z.object({
 
   privacyNoticeVersion: z.string().default("v1.0.0"),
   acceptPrivacyNotice: z.literal(true, {
-    errorMap: () => ({ message: "You must accept the Privacy Notice" }),
+    message: "You must accept the Privacy Notice",
   }),
 
   betaTermsVersion: z.string().default("v1.0.0"),
   acceptBetaTerms: z.literal(true, {
-    errorMap: () => ({ message: "You must accept the Beta Terms" }),
+    message: "You must accept the Beta Terms",
   }),
 
   marketingConsent: z.boolean().default(false),
@@ -72,4 +72,3 @@ export const applicationSchema = z.object({
 });
 
 export type ApplicationInput = z.infer<typeof applicationSchema>;
-
