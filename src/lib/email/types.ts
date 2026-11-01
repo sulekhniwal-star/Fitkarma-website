@@ -11,6 +11,7 @@ export interface SendEmailOptions {
   text: string;
   idempotencyKey?: string;
   messageType: EmailMessageType;
+  applicationId?: string;
 }
 
 export interface SendEmailResult {
@@ -23,4 +24,3 @@ export interface SendEmailResult {
 export interface EmailAdapter {
   send(options: SendEmailOptions): Promise<SendEmailResult>;
 }
-

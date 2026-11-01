@@ -81,12 +81,12 @@ export function Footer({ locale, messages }: FooterProps) {
             </span>
             <ul className="space-y-2.5">
               <li>
-                <Link href={`/${locale}#privacy`} className="hover:text-white transition-colors">
+                <Link href={`/${locale}/privacy`} className="hover:text-white transition-colors">
                   {messages.footer.privacyNotice}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}#privacy`} className="hover:text-white transition-colors">
+                <Link href={`/${locale}/terms`} className="hover:text-white transition-colors">
                   {messages.footer.betaTerms}
                 </Link>
               </li>
