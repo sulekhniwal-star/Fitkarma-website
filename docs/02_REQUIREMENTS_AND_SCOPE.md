@@ -4,18 +4,23 @@
 
 ### Must have for public beta launch
 
-- Responsive English and Hindi website.
-- Hero section that states FitKarma's approved positioning and a clear beta CTA.
-- Product and feature storytelling with accurate rollout labels.
-- How-it-works explanation, privacy overview, beta programme explanation and FAQ.
-- Email-based registration and email verification.
-- Name and email collection plus primary feature-interest question.
-- Database-enforced, atomic maximum of 1,000 accepted Phase 1 registrations.
-- Verified Phase 2 waitlist once Phase 1 is full.
-- Confirmation email, accepted-seat email and waitlist email.
-- Secure, role-restricted admin operations for capacity, applicants and phase status.
-- Consent/version record and minimal audit trail.
-- Accessibility, SEO basics, abuse protection, monitoring and production checklist.
+- Multi-page application architecture with dedicated routes:
+  - `/` — Cinematic landing page with WebGL interactive background, cursor dynamics, bento highlights, and quick CTA.
+  - `/features` — In-depth interactive showcase of FitKarma capabilities with live simulator widgets (katori/roti slider, DIP preview, AI scanner).
+  - `/about` — Origin story, mission, and India-first wellness philosophy.
+  - `/beta` — Dedicated Beta Application page with live Phase 1 capacity counter (1,000 spot ceiling) and spot reservation.
+  - `/faq` — Searchable categorized FAQ.
+  - `/privacy` & `/terms` — DPDP 2025 compliant privacy notice and beta terms.
+  - `/auth/verify` — Double opt-in OTP / magic link verification handler.
+- Responsive bilingual support (English-first launch with seamless instant Hindi language toggle).
+- Premium Dark Mode (Linear / Apple style) with obsidian backgrounds, glowing borders, and crisp typography.
+- Interactive WebGL / Canvas background with dynamic cursor reaction and Lenis smooth momentum scrolling.
+- Double opt-in email verification using Resend and Supabase Auth (magic link / OTP).
+- Database-enforced atomic allocation of exactly 1,000 Phase 1 places (FIFO by email verification timestamp).
+- Automatic transition to Phase 2 waitlist once 1,000 places are claimed.
+- Name, email, multi-select feature priorities, and optional platform/language preference collection.
+- Branded confirmation, acceptance, and waitlist transactional emails via Resend.
+- Protected admin console with Supabase Auth + MFA for monitoring applications and phase capacities.
 
 ### Should have
 

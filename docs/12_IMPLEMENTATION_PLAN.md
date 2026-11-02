@@ -1,44 +1,48 @@
 # 12 — Implementation Plan and Agent Work Units
 
-## Milestone 0 — Repository and readiness
+## Milestone 0 — Repository, Architecture & 3D/Motion Readiness
 
-**Goal:** establish a safe, reproducible foundation before visual feature work.
-
-Tasks:
-- Create Next.js App Router + TypeScript + Tailwind project using current stable compatible versions.
-- Commit lockfile and document selected versions.
-- Install/verify formatting, linting and type checks.
-- Create environment variable schema and `.env.example`.
-- Establish local, preview and production environment separation.
-- Add locale routing/message files for English/Hindi.
-- Add Antigravity `AGENTS.md` and modular rules.
-
-Acceptance: app boots, both locales render, type-check/lint/build pass, no real secret committed.
-
-## Milestone 1 — Brand foundation and landing page
+**Goal:** Establish a high-performance, modern project architecture with 3D/WebGL and motion foundations.
 
 Tasks:
-- Create central design tokens and reusable components.
-- Integrate approved wordmark/logo assets when available; use text lockup placeholder until then.
-- Build responsive nav, hero, feature bento grid, India nutrition section, how-it-works, privacy overview, beta section, FAQs and footer.
-- Create illustrative product visuals with explicit labels.
-- Add metadata, SEO, sitemap and locale alternates.
+- Initialize Next.js 16 (App Router) + React 19 + TypeScript + Tailwind CSS.
+- Configure Lenis smooth scrolling provider and GSAP + ScrollTrigger integration.
+- Set up React Three Fiber (R3F) + `@react-three/drei` + `postprocessing` for the ambient interactive background canvas with dynamic cursor reactions.
+- Configure Motion (`framer-motion`) for layout transitions and micro-interactions.
+- Set up Supabase client and Resend SDK with React Email.
+- Integrate official FitKarma vector logo system from `FitKarma-Logo/`.
+- Establish bilingual dictionary infrastructure (`/messages/en.json`, `/messages/hi.json`) with instant locale switching.
 
-Acceptance: design direction matches specification; all visible copy appears in English/Hindi; no invented claims; mobile and accessibility checks pass.
+Acceptance: Next.js 16 boots cleanly, 3D interactive canvas responds smoothly to pointer movements, smooth scroll runs at 60+ FPS, design tokens render crisp dark mode.
 
-## Milestone 2 — Beta application and email verification
+## Milestone 1 — Multi-Page Brand Experience & Interactive Showcase
+
+**Goal:** Build out the dedicated multi-page experience with sleek animations, bento layouts, and interactive simulators.
 
 Tasks:
-- Implement controlled registration schema and server validation.
-- Create database migrations for phases, applications, outbox and audit events.
-- Configure Supabase Auth email magic link/OTP with production callback allowlist.
-- Implement generic application response, verification and resend cooldown.
-- Build atomic allocation transaction with hard Phase 1 cap 1,000.
-- Implement Phase 2 waitlist state.
-- Implement email adapter and local/test email sink.
-- Add idempotency and concurrency tests.
+- **Navigation & Footer:** Sticky glassmorphism header with logo lockup, page links (`/features`, `/about`, `/beta`, `/faq`), language switcher, and glow CTA.
+- **Home (`/`):** Cinematic hero with 3D interactive canvas, positioning eyebrow, headline split animation, feature bento cards with hover spotlight, India nutrition preview, Daily Intelligence teaser, and waitlist progress bar.
+- **Features (`/features`):** Deep-dive interactive bento page featuring:
+  - Interactive Indian Food Logger widget (roti slider, katori volume selector, tadka oil calculator).
+  - Live Daily Intelligence Package (DIP) simulator.
+  - AI Photo Food Scanner simulator with confidence indicators.
+  - Connected Health, Offline-first, and Family Wellness cards.
+- **About (`/about`):** FitKarma origin story, mission, the cultural need for India-specific health intelligence, and data privacy commitments.
+- **FAQ (`/faq`):** Searchable, animated accordion answering key beta, nutrition, and privacy questions.
+- **Legal (`/privacy`, `/terms`):** Polished, legally compliant DPDP 2025 privacy notice and beta terms.
 
-Acceptance: all registration/capacity tests in `10_TESTING_AND_ACCEPTANCE.md` pass.
+Acceptance: Multi-page navigation is fluid with zero layout shift, interactive simulators work flawlessly, visual punch matches the Linear/Apple dark aesthetic, and all copy is localized.
+
+## Milestone 2 — Beta Application, Verification & Seat Allocation
+
+**Goal:** Implement the dedicated `/beta` page with strict atomic 1,000 Phase 1 seat reservation and double opt-in verification.
+
+Tasks:
+- **Beta Page (`/beta`):** Live verified seat counter (1,000 cap), dynamic progress bar, and frictionless multi-step registration form (Name, Email, Multi-select Feature Interests, Platform preference).
+- **Supabase Database Schema:** Migrations for `applications`, `phases`, `outbox`, and `audit_logs` with Row Level Security (RLS).
+- **Atomic Allocation Function:** PostgreSQL function enforcing strict FIFO allocation by email verification timestamp, auto-transitioning to Phase 2 waitlist at 1,000 seats.
+- **Double Opt-In Email Verification:** Resend transactional email dispatch with React Email template containing secure OTP / magic link.
+- **Verification Callback (`/auth/verify`):** Confirms email, triggers atomic seat assignment, and renders personalized reservation status card.
 
 ## Milestone 3 — Admin console
 

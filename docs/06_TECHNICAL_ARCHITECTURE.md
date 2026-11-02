@@ -2,15 +2,16 @@
 
 ## 1. Approved direction
 
-- **Frontend:** Next.js App Router + TypeScript.
-- **Styling:** Tailwind CSS with central design tokens.
-- **Backend/data:** Supabase PostgreSQL, Auth, server-side functions/Edge Functions as appropriate.
+- **Framework:** Next.js 16 (App Router) with React 19 and TypeScript.
+- **Styling:** Tailwind CSS with centralized design tokens and border-glow utilities.
+- **3D & Graphics:** React Three Fiber (R3F) + `@react-three/drei` + `postprocessing` for WebGL interactive canvas background and dynamic cursor reactive particle fields.
+- **Motion & UI Animations:** Motion (`framer-motion`) for buttery UI micro-interactions, layout transitions, and interactive bento cards.
+- **Scroll & Storytelling:** GSAP + ScrollTrigger for pinned multi-step walkthroughs; Lenis for silky smooth momentum scrolling.
+- **Backend & Database:** Supabase PostgreSQL, Row Level Security (RLS), atomic seat allocation transaction/RPC function, and Supabase Auth (double opt-in OTP / magic links).
 - **Hosting:** Vercel.
-- **Email:** transactional provider behind an adapter (provider not yet selected).
-- **Bot controls:** honeypot + server-side rate limit; add a managed challenge only after choosing/approving provider.
-- **Monitoring:** structured server logs and an error-monitoring product after owner approval.
-
-Select current stable versions at implementation time, verify compatibility with official documentation, commit lockfiles, and record chosen versions in `docs/00_DECISION_REGISTER.md` or an ADR. Do not use an old pinned version merely because a tutorial used it.
+- **Transactional Email:** Resend with React Email templates.
+- **Bot Controls:** Honeypot + server-side rate limit.
+- **Multi-Page App Structure:** Dedicated routes for `/` (Home), `/features`, `/about`, `/beta`, `/faq`, `/privacy`, `/terms`, and `/auth/verify`.
 
 ## 2. Logical architecture
 
@@ -85,37 +86,36 @@ src/
     [locale]/
       page.tsx
       features/page.tsx
+      about/page.tsx
       beta/page.tsx
+      faq/page.tsx
       privacy/page.tsx
       terms/page.tsx
-      faq/page.tsx
-    auth/confirm/route.ts
+    auth/verify/route.ts
     api/beta/applications/route.ts
     api/beta/resend-verification/route.ts
     admin/...
   components/
-    layout/
-    marketing/
-    beta/
-    admin/
-    ui/
-  i18n/
+    canvas/          # R3F WebGL canvas, particle fields, cursor interactions
+    motion/          # GSAP ScrollTrigger wrappers, Lenis provider
+    layout/          # Navbar, Footer, bilingual switcher
+    marketing/       # Bento cards, Indian nutrition demo, DIP simulator
+    beta/            # Live counter, spot reservation form, OTP dialog
+    admin/           # Protected admin analytics & phase management
+    ui/              # Buttons, inputs, dialogs, badges, glow borders
+  i18n/              # Language dictionary & locale helpers
   lib/
-    validation/
-    supabase/
-    email/
-    rate-limit/
-    security/
+    supabase/        # Supabase client & admin server actions
+    email/           # Resend adapter & React Email templates
+    rate-limit/      # Edge rate limiting & honeypot validation
   messages/
-    en.json
-    hi.json
+    en.json          # English copy
+    hi.json          # Hindi copy
 supabase/
   migrations/
   functions/
-  tests/
 public/
-  brand/
-  images/
+  brand/             # SVGs & PNGs from FitKarma-Logo/
 ```
 
 The agent may adjust the exact layout to current Next.js conventions, but must preserve clear boundaries and document the change.

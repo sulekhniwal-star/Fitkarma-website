@@ -2,52 +2,54 @@
 
 ## 1. Design character
 
-**Approved direction:** Hybrid futuristic + cinematic product launch.
+**Approved direction:** Premium Dark Mode (Linear / Apple style) with subtle obsidian gradients, glowing accents, WebGL / Canvas interactive background with dynamic cursor effects, sleek animations, and crisp typography.
 
-The site should feel like a premium technology product launch, but approachable and human enough for everyday Indian health and wellness. Avoid a generic hospital website, bodybuilding/gym template, crypto dashboard or over-decorated neon gaming aesthetic.
+The site is designed to feel like a world-class technology launch—punchy, sleek, and high-performance, while remaining culturally authentic, warm, and approachable for everyday Indian wellness. It avoids dry corporate templates, plain text grids, bodybuilding tropes, or gaudy neon overload.
 
-## 2. Foundation
+## 2. Foundation & Color Palette
 
-- Primary canvas inherited from FitKarma master direction: `#0D0F12` (approved source value).
-- Use layered near-black/charcoal surfaces for depth.
-- Suggested accent `#B7F36B` (PROPOSED; owner must approve after logo exploration).
-- Supporting highlight `#64DCCB` and warm neutral `#E5B878` are optional proposed accents; use sparingly.
-- Text: warm white for primary; muted slate/grey for secondary; never reduce contrast to achieve a “premium” look.
-- Avoid using accent colour for large paragraphs or every control.
+- **Primary canvas:** `#0D0F12` (deep obsidian).
+- **Surface elevations:**
+  - `surface-1`: `#14171C` (base cards)
+  - `surface-2`: `#1A1E24` (elevated bento cards, modals)
+  - `surface-3`: `#222730` (hover states, active controls)
+- **Brand Accents:**
+  - `accent-green` (Life/Vitality): `#36C96A`
+  - `accent-glow` (Vibrant Karma Glow): `#65C94B`
+  - `accent-gold` (Warm Turmeric/Ayurvedic nuances): `#D6A84B`
+- **Text hierarchy:**
+  - Primary: `#F9FAFB` (crisp white)
+  - Secondary: `#9CA3AF` (muted slate)
+  - Tertiary: `#6B7280` (subtle captions)
+- **Glassmorphism & Borders:**
+  - Default borders: `1px solid rgba(255, 255, 255, 0.08)`
+  - Active / hover borders: `1px solid rgba(101, 201, 75, 0.35)` with subtle drop shadow glow (`0 0 20px rgba(101, 201, 75, 0.15)`).
 
-## 3. Typography
+## 3. Motion, 3D, and Interactive Graphics Stack
 
-- Use one strong display face and one highly readable body face, with sensible system fallbacks.
-- Proposed direction: Manrope or Geist for headings and Inter or Geist for body; choose one pairing after checking Hindi glyph quality, performance and licensing.
-- Hindi font must render Devanagari cleanly with correct matras and line-height. Test both scripts in the actual selected font before locking it.
-- Use fluid responsive type scales; do not let huge cinematic headings break on mobile.
+- **Smooth Momentum Scrolling:** Powered by **Lenis** (`lenis`) for buttery smooth viewport scrolling across all routes.
+- **3D & WebGL Canvas Background:** Built with **React Three Fiber (R3F)**, **@react-three/drei**, and **postprocessing**. Renders an ambient, dynamic energy grid / particle field that gently reacts to pointer/cursor movements and scroll velocity.
+- **Micro-Interactions & UI Transitions:** Powered by **Motion** (`framer-motion` / `motion`) for layout transitions, stagger entrances, interactive bento card tilt, magnetic buttons, and glowing border highlights.
+- **Scroll Choreography:** **GSAP + ScrollTrigger** for pinned multi-step product walkthroughs, split-text headline reveals, and horizontal card sequences.
+- **Interactive Product Mockups:**
+  - Interactive Indian Food Logger widget (slider for roti count, katori portion selector, tadka oil slider).
+  - Live Daily Intelligence Package (DIP) simulator showcasing personalized daily health insights.
+  - Interactive AI Photo Food Scanner simulator with confidence indicators.
 
-## 4. Layout and components
+## 4. Typography
 
-- Spacious editorial composition with a clear grid.
-- Bento cards for grouped features; not every section needs a card.
-- Glass effects are accents, not a blanket treatment. Maintain readable contrast and restrained blur.
-- Use rounded corners consistently; avoid excessive pill shapes.
-- Strong whitespace and clear CTA hierarchy.
-- Sticky navigation is acceptable if it does not hide content or consume too much mobile viewport.
-- Product visuals should use believable app/device compositions. Until real app screenshots are supplied, use explicitly illustrative concept screens; do not fabricate real product states or claim screens are live.
+- **Headings & Display:** `Geist` or `Manrope` (bold, tight tracking, crisp modern geometric feel).
+- **Body & Captions:** `Geist` or `Inter` (optimal legibility, balanced line heights).
+- **Hindi (Devanagari):** High-fidelity Google font pairing (such as `Noto Sans Devanagari` or `Rozha One / Poppins`) ensuring accurate matras and conjuncts.
+- Fluid responsive typography with `clamp()` to scale gracefully from mobile to 4K displays.
 
-## 5. Cinematic elements
+## 5. Brand Identity Assets
 
-- Hero may use a controlled gradient horizon, abstract orbit/energy motif, health-data-inspired linework or layered smartphone/product render.
-- Use scroll reveal, depth and parallax only where they improve comprehension.
-- Add spring-like micro-interactions to buttons/cards only if they remain subtle and performant.
-- No forced video autoplay with sound.
-- Motion must respect `prefers-reduced-motion`; provide static alternatives.
-- No animation may block CTA interaction, page reading, screen-reader access or page performance.
-
-## 6. Imagery and brand
-
-- Do not use stock imagery that implies an actual FitKarma customer, clinician, medical result or partnership.
-- Prefer custom AI-generated abstract brand visuals, carefully directed Indian food imagery, and product device mockups.
-- Never depict an unverified app screen as a real screenshot. Add an “Illustrative preview” label when appropriate.
-- Keep photography inclusive and culturally grounded without stereotypes.
-- Logo and brand symbol are not yet approved; reserve space for a flexible wordmark and symbol. Follow `13_LOGO_BRIEF.md`.
+The brand system is fully integrated from the approved asset library in `FitKarma-Logo/`:
+- Mark: `FitKarma-Logo/svg/fitkarma-mark.svg`
+- Primary Dark: `FitKarma-Logo/svg/fitkarma-primary-dark.svg`
+- Wordmark Dark: `FitKarma-Logo/svg/fitkarma-wordmark-dark.svg`
+- App Icon Dark: `FitKarma-Logo/svg/fitkarma-app-icon-dark.svg`
 
 ## 7. Responsive behaviour
 

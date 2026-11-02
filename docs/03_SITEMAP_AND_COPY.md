@@ -1,17 +1,18 @@
 # 03 — Sitemap and Website Copy Direction
 
-## Site map
+## Multi-Page Site Map
 
-- `/en` — English landing page
-- `/hi` — Hindi landing page
-- `/en/features` and `/hi/features` — grouped feature overview (may be section anchors on the landing page for MVP)
-- `/en/beta` and `/hi/beta` — beta application
-- `/en/privacy` and `/hi/privacy` — privacy notice
-- `/en/terms` and `/hi/terms` — beta programme terms
-- `/en/faq` and `/hi/faq` — FAQs (may be landing-page section initially)
-- `/auth/confirm` — email verification callback; never index
-- `/beta/status` — status page for the applicant's own verified email/session only; no public email lookup that leaks registration status
-- `/admin` — protected admin console; no indexing
+The website is structured as a premium multi-page application with bilingual support (`/en` and `/hi`, defaulting to English with seamless instant toggle):
+
+- `/` (or `/en`, `/hi`) — **Cinematic Landing Page**: WebGL dynamic interactive canvas background, cinematic hero with reactive cursor effects, interactive bento feature highlights, Indian nutrition showcase, Daily Intelligence preview, and quick CTA.
+- `/features` — **Deep-Dive Features Page**: Comprehensive interactive showcase of FitKarma's 6 core pillars (Indian Nutrition Engine, Daily Intelligence Package, AI Photo & Voice Logging, Connected Health, Offline-First, Family Wellness) with interactive sliders, katori/roti calculators, and live mockup widgets.
+- `/about` — **About & Philosophy Page**: The FitKarma origin story, mission, why Western fitness apps fail in Indian households, our India-first wellness philosophy, and principles of data privacy.
+- `/beta` — **Dedicated Beta Access & Waitlist Page**: Live Phase 1 accepted counter (capped at 1,000 spots), multi-select feature priority intake, double opt-in OTP / magic link email verification, and instant status card.
+- `/faq` — **Searchable FAQ Page**: Categorized accordion for Beta Access, Indian Food Tracking, Privacy & Security, Device Integrations, and Rollout Timeline.
+- `/privacy` — **DPDP 2025 Privacy Notice**: Clear, plain-language privacy policy explaining data handling, consent management, and rights.
+- `/terms` — **Beta Programme Terms**: Beta program conditions, progressive feature rollout details, and participant code of conduct.
+- `/auth/verify` — **Verification Callback Route**: Confirms double opt-in OTP/magic links, assigns atomic Phase 1 / Phase 2 waitlist position, and displays reserved seat card.
+- `/admin` — **Protected Admin Console**: Supabase Auth + MFA protected dashboard for monitoring registration metrics, phase caps, and email deliverability.
 
 ## Recommended landing-page sequence
 

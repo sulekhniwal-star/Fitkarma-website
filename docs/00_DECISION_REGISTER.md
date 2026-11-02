@@ -10,10 +10,10 @@
 | D-002 | Primary positioning: “India's AI-powered Fitness and Wellness Ecosystem” | APPROVED; use in hero/metadata. |
 | D-003 | No domain purchased yet | APPROVED fact; use a preview/Vercel URL in development; do not buy or configure DNS without permission. |
 | D-004 | Coding environment is Google Antigravity | APPROVED; provide root `AGENTS.md` and modular `.agents/rules/`. |
-| D-005 | Website stack: Next.js + TypeScript + Tailwind CSS + Supabase + Vercel | APPROVED direction; pin versions only after compatibility check and record them. |
-| D-006 | English and Hindi at launch | APPROVED; no English-only launch. |
-| D-007 | Visual approach mixes hybrid futuristic and cinematic product-launch design | APPROVED. |
-| D-008 | Logo does not exist yet; it will be created using AI | APPROVED intent; brief in `13_LOGO_BRIEF.md`; final mark requires owner selection and vector cleanup. |
+| D-005 | Website stack: Next.js 16 (App Router) + React 19 + TypeScript + Tailwind CSS + Supabase + Resend + Motion + GSAP ScrollTrigger + Lenis + React Three Fiber / Drei / Postprocessing | APPROVED; cutting-edge motion, 3D WebGL background, smooth scroll, server-side data integrity. |
+| D-006 | English and Hindi bilingual experience | APPROVED; English-first launch with seamless Hindi language switcher option. |
+| D-007 | Visual approach: Premium Dark Mode (Linear / Apple style) with obsidian gradients, glowing accents, WebGL / Canvas interactive background with dynamic cursor effects, sleek animations, and crisp typography | APPROVED; avoids plain/corporate feel; high visual punch and fluid interactive mockups. |
+| D-008 | Brand Identity & Vector Assets | APPROVED; verified vector identity suite located in `FitKarma-Logo/` (`fitkarma-mark.svg`, `fitkarma-primary-dark.svg`, wordmarks, app icons). |
 | D-009 | Full feature inventory in FitKarma Master Documentation is intended for beta testers | APPROVED; delivered progressively, not necessarily all active on day one. Do not silently remove formerly P1/P2/P3/deferred capabilities from the beta-program inventory. |
 | D-010 | Phase 1 has at most 1,000 places | APPROVED; capacity enforced server-side and in the database. |
 | D-011 | Phase 1 allocation is first-come, first-served | APPROVED; ordering is by successful email verification and atomic allocation. |
@@ -35,6 +35,14 @@
 | D-027 | Feature Priority Selection Format | APPROVED (formerly O-012); multi-select (choose multiple features, e.g. top 3) + optional "Other" text. |
 | D-028 | FIFO Allocation Clock | APPROVED (formerly O-013); ordered strictly by successful email verification timestamp; seats allocated atomically upon verification. |
 | D-029 | Seat Reallocation on Withdrawal | APPROVED; auto-promote waitlist: when a Phase 1 user withdraws or requests deletion, automatically promote the earliest verified Phase 2 waitlist applicant into Phase 1 accepted. |
+| D-030 | Multi-Page Website Architecture | APPROVED; dedicated full routes: `/` (Cinematic Home), `/features` (Deep dive bento capability showcase), `/about` (Mission & Indian wellness story), `/beta` (Spot reservation & OTP/magic link verification), `/faq` (Searchable FAQ), `/privacy` & `/terms` (Legal), `/auth/verify` (Double opt-in callback). |
+| D-031 | 3D Visual Metaphor: Floating 'Karma Ring' | APPROVED; luminous 3D particle torus & biometric pulse reacting to cursor physics and scroll speed via R3F + Drei + postprocessing. |
+| D-032 | Post-Registration Asset: VIP Beta Pass | APPROVED; personalized digital card displaying reserved seat # badge (e.g., #42), downloadable as high-res PNG and 1-click shareable to WhatsApp & X. |
+| D-033 | Interactive Indian Meal Sandbox | APPROVED; `/features` page interactive widget with regional thalis (North, South, Bengali, etc.) and real-time katori/tadka macro calculators. |
+| D-034 | Subtle UI Sound Design (SFX) | APPROVED; soft futuristic micro-interactions (clicks, hover blips, success chime) with persistent sound toggle in the floating navbar. |
+| D-035 | Floating Glass Navbar & Persistent Canvas | APPROVED; centered dynamic glass pill navbar with instant sound/locale toggles; persistent 3D canvas across routes with smooth cross-fade page transitions. |
+| D-036 | Beta Registration Fields | APPROVED; collects Name, Email, Primary Health Goals (multi-select), Platform (iOS/Android/Both), and Features Needed Most from Feature Inventory (multi-select + optional other). |
+| D-037 | WebGL Performance & Graceful Fallback | APPROVED; dynamic hardware/FPS detection scaling particle count, falling back smoothly to lightweight CSS glowing gradient on lower-end devices. |
 
 ## Proposed defaults for implementation
 
