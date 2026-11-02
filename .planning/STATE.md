@@ -15,7 +15,7 @@
 | Phase | Description | Status | Blockers | Notes |
 |---|---|---|---|---|
 | **Phase 1** | Foundation, Tooling & Locale Routing | **Complete** | None | Next.js App Router, Tailwind, i18n routing (`/en`, `/hi`), Zod env |
-| **Phase 2** | Brand Identity, Tokens & Reusable UI Primitives | **Ready to Plan** | None | Design tokens, vector assets, button/card primitives, 3D frame |
+| **Phase 2** | Brand Identity, Tokens & Reusable UI Primitives | **Planned (3 Plans)** | None | Design tokens, vector assets, button/card primitives, 3D frame |
 | **Phase 3** | Cinematic Landing Page & Moat Storytelling | Pending | Phase 2 | Hero, problem-solution, bento grid, Hindi parity |
 | **Phase 4** | Database Architecture & Atomic Seat Allocation | Pending | Phase 1 | Supabase migrations, RLS, atomic `claim_beta_seat` |
 | **Phase 5** | Registration Form, Verification Flow & Email Pipeline | Pending | Phase 3, 4 | VIP card form, Resend adapter, confirmation callbacks |
@@ -44,8 +44,8 @@ All core pre-launch architectural and policy decisions (D-001 through D-029) are
 
 ## Next Action
 
-Plan Phase 2 (Brand Identity, Tokens & Reusable UI Primitives):
+Execute Phase 2:
 ```bash
-/gsd-plan-phase 2
+/gsd-execute-phase 2
 ```
 
