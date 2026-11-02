@@ -54,7 +54,7 @@ This roadmap organizes the development of the FitKarma pre-launch marketing site
 - **Requirements Covered:** `LAND-02`, `LAND-03`, `LAND-04`, `LAND-05`, `LAND-06`, `LAND-07`, `LAND-08`, `I18N-03`, `PERF-01`, `PERF-02`.
 - **Dependencies:** Phase 2 (Completed).
 - **Verification:** Complete landing page renders in English and Hindi without missing translations; Lighthouse score > 90 across Performance, SEO, and Accessibility.
-- **Status:** Ready to Plan
+- **Status:** Planned (3 plans across 3 waves)
 
 ---
 

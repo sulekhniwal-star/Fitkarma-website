@@ -16,7 +16,7 @@
 |---|---|---|---|---|
 | **Phase 1** | Foundation, Tooling & Locale Routing | **Complete** | None | Next.js App Router, Tailwind, i18n routing (`/en`, `/hi`), Zod env |
 | **Phase 2** | Brand Identity, Tokens & Reusable UI Primitives | **Complete** | None | BrandLogo, Indian motifs (jaali/mandala/desi), 3D phone frame, Header, Footer |
-| **Phase 3** | Cinematic Landing Page & Moat Storytelling | **Ready to Plan** | None | Problem-solution, bento grid with 3D mockups, FAQ, SEO metadata |
+| **Phase 3** | Cinematic Landing Page & Moat Storytelling | **Planned (3 Plans)** | None | Problem-solution, bento grid with 3D mockups, FAQ, SEO metadata |
 | **Phase 3** | Cinematic Landing Page & Moat Storytelling | Pending | Phase 2 | Hero, problem-solution, bento grid, Hindi parity |
 | **Phase 4** | Database Architecture & Atomic Seat Allocation | Pending | Phase 1 | Supabase migrations, RLS, atomic `claim_beta_seat` |
 | **Phase 5** | Registration Form, Verification Flow & Email Pipeline | Pending | Phase 3, 4 | VIP card form, Resend adapter, confirmation callbacks |
@@ -45,8 +45,8 @@ All core pre-launch architectural and policy decisions (D-001 through D-029) are
 
 ## Next Action
 
-Plan Phase 3 (Cinematic Landing Page & Moat Storytelling):
+Execute Phase 3:
 ```bash
-/gsd-plan-phase 3
+/gsd-execute-phase 3
 ```
 
