@@ -15,6 +15,7 @@
   "nav": {
     "home": "Home",
     "features": "Features",
+    "simulators": "Simulators",
     "about": "Our Mission",
     "beta": "VIP Beta Pass",
     "faq": "FAQ"
@@ -92,6 +93,139 @@
       "subtitle": "All 1,000 Phase 1 VIP seats are allocated. You are in priority queue for automatic FIFO backfill when members withdraw.",
       "queue_label": "Your Live Queue Position",
       "promotion_notice": "Whenever an accepted Phase 1 seat is freed, the earliest waitlisted applicant is automatically promoted."
+    }
+  },
+  "simulators": {
+    "badge": "Interactive Product Sandbox",
+    "title": "Experience India-First Health Intelligence",
+    "subtitle": "Test FitKarma's core differentiators firsthand — from authentic household portion tracking to contextual circadian daily guidance.",
+    "tabs": {
+      "meal_sandbox": "Indian Meal Sandbox",
+      "dip": "Daily Intelligence (DIP)",
+      "food_scanner": "3D AI Food Scanner"
+    },
+    "meal_sandbox": {
+      "title": "Indian Meal Sandbox",
+      "badge": "Household Portions Simulator",
+      "desc": "Adjust rotis, katoris, and tadka intensity to see real-time macro calculations adapted to actual Indian home cooking.",
+      "regions": {
+        "north": {
+          "title": "North Indian Thali",
+          "desc": "Phulkas with desi ghee, slow-simmered dal tadka, fresh paneer bhurji, dahi, and kachumber.",
+          "dal_name": "Yellow Dal Tadka",
+          "subzi_name": "Paneer Bhurji / Subzi"
+        },
+        "south": {
+          "title": "South Indian Thali",
+          "desc": "Traditional steamed Ponni rice, drumstick sambar, pepper rasam, beetroot poriyal, and fresh curd.",
+          "dal_name": "Drumstick Sambar",
+          "subzi_name": "Beetroot Poriyal"
+        },
+        "bengali": {
+          "title": "Bengali Thali",
+          "desc": "Aromatic Gobindobhog rice, sweet-spiced cholar dal, classic aloo posto, and light tomato chutney.",
+          "dal_name": "Cholar / Masoor Dal",
+          "subzi_name": "Aloo Posto / Shukto"
+        },
+        "western": {
+          "title": "Western (Gujarati/Maharashtrian) Thali",
+          "desc": "Soft thin rotlis, khatti-meethi dal or amti, sev tameta, comforting kadhi, and chilled chaas.",
+          "dal_name": "Khatti-Meethi Dal / Amti",
+          "subzi_name": "Sev Tameta / Batata Bhaji"
+        }
+      },
+      "controls": {
+        "roti_label": "Phulkas / Rotis",
+        "roti_count": "{count} rotis",
+        "ghee_toggle": "Brush with Desi Ghee (+45 kcal/roti)",
+        "rice_label": "Steamed Rice",
+        "rice_katoris": "{count} katoris (150ml)",
+        "dal_label": "Dal / Sambar Portion",
+        "dal_katoris": "{count} katoris",
+        "tadka_label": "Tadka (Tempering) Intensity",
+        "tadka_minimal": "Minimal (Diet / 1/2 tsp oil)",
+        "tadka_standard": "Home Style (1 tsp ghee)",
+        "tadka_rich": "Festive / Dhaba (2 tbsp ghee)",
+        "curd_label": "Fresh Curd / Dahi (1 katori)",
+        "subzi_label": "Regional Subzi / Curry (1 katori)"
+      },
+      "macros": {
+        "total_calories": "Total Calories",
+        "protein": "Protein",
+        "carbs": "Net Carbs",
+        "fats": "Healthy Fats",
+        "fiber": "Dietary Fiber"
+      },
+      "insight": {
+        "title": "Why Indian Household Portions Matter",
+        "description": "Standard calorie counters fail because a katori of dal varies by 100+ kcal depending on whether the tadka is home-style or dhaba-style. FitKarma captures these exact culinary nuances."
+      }
+    },
+    "dip": {
+      "title": "Daily Intelligence Package (DIP)",
+      "badge": "In Beta Testing",
+      "subtitle": "Contextual circadian health intelligence delivered at pivotal metabolic moments throughout your day.",
+      "periods": {
+        "morning": {
+          "label": "07:00 Morning Readiness",
+          "title": "Circadian Morning Readiness",
+          "status": "Optimal Recovery",
+          "insight": "High sleep architecture score (86%). Your metabolic focus peak is projected between 08:30 and 10:30 AM.",
+          "action": "Suggested: High-protein breakfast (Moong Dal Chilla or Boiled Eggs) to steady midday glucose."
+        },
+        "midday": {
+          "label": "13:30 Midday Nudge",
+          "title": "Post-Lunch Glucose & Energy Pulse",
+          "status": "Hydration on Track",
+          "insight": "Moderate glycemic load detected from lunch. A brief 10-minute leisurely stroll attenuates post-prandial glucose spike by ~22%.",
+          "action": "Suggested: Take a 10-minute post-lunch walk before resuming screen work."
+        },
+        "evening": {
+          "label": "21:00 Evening Debrief",
+          "title": "Night Recovery & Wind-Down",
+          "status": "92/100 Daily Karma Score",
+          "insight": "Daily macro balance achieved at 94%. Your natural melatonin secretion window initiates in approximately 45 minutes.",
+          "action": "Suggested: Dim overhead blue lights; enjoy warm turmeric milk or chamomile infusion."
+        }
+      },
+      "metrics": {
+        "sleep_score": "Sleep Recovery",
+        "resting_hr": "Resting HR",
+        "hydration": "Hydration",
+        "karma_score": "Karma Index",
+        "macro_balance": "Macro Target"
+      },
+      "disclaimer": "Illustrative preview of FitKarma Daily Intelligence Package algorithms. Guidance is strictly nutritional and lifestyle awareness."
+    },
+    "food_scanner": {
+      "title": "AI Indian Food Scanner",
+      "badge": "Interactive 3D Device Simulation",
+      "subtitle": "Point your camera at any home-cooked or regional Indian plate for instant component segmentation and macro recognition.",
+      "dishes": {
+        "thali": "Classic Home Thali",
+        "dosa": "Masala Dosa with Sambar",
+        "biryani": "Paneer / Veg Biryani with Raita"
+      },
+      "hud": {
+        "status": "CAMERA READY",
+        "mode": "AR FOOD DETECT",
+        "action_scan": "Scan & Analyze Plate",
+        "scanning": "Analyzing Components...",
+        "confidence": "AI Confidence",
+        "add_to_log": "Add Meal to FitKarma Log",
+        "logged_toast": "✓ Meal added to today's nutrition log!"
+      },
+      "items": {
+        "roti": "Whole Wheat Phulka (2x)",
+        "dal": "Yellow Dal Tadka (1.5 Katori)",
+        "bhindi": "Bhindi Masala (1 Katori)",
+        "dosa": "Crisp Masala Dosa",
+        "sambar": "Vegetable Sambar (1 Katori)",
+        "chutney": "Coconut & Tomato Chutney",
+        "biryani": "Fragrant Biryani (1 Plate)",
+        "raita": "Cucumber Onion Raita (1 Katori)"
+      },
+      "disclaimer": "Simulated UI: Illustrative of FitKarma mobile AI recognition engine trained on 2,500+ Indian dishes."
     }
   }
 }

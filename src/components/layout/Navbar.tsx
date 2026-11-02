@@ -27,6 +27,9 @@ export const Navbar: React.FC = () => {
           <Link href="/features" className="hover:text-[#36C96A] transition-colors">
             {t('features')}
           </Link>
+          <Link href="/simulators" className="hover:text-[#36C96A] transition-colors">
+            {t('simulators')}
+          </Link>
           <Link href="/about" className="hover:text-[#36C96A] transition-colors">
             {t('about')}
           </Link>
