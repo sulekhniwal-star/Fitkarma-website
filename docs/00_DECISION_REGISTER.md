@@ -43,6 +43,7 @@
 | D-035 | Floating Glass Navbar & Persistent Canvas | APPROVED; centered dynamic glass pill navbar with instant sound/locale toggles; persistent 3D canvas across routes with smooth cross-fade page transitions. |
 | D-036 | Beta Registration Fields | APPROVED; collects Name, Email, Primary Health Goals (multi-select), Platform (iOS/Android/Both), and Features Needed Most from Feature Inventory (multi-select + optional other). |
 | D-037 | WebGL Performance & Graceful Fallback | APPROVED; dynamic hardware/FPS detection scaling particle count, falling back smoothly to lightweight CSS glowing gradient on lower-end devices. |
+| D-038 | Email Architecture Separation (ADR-001) | APPROVED; Supabase Auth sends verification OTP/magic link via custom SMTP to Resend; Next.js server actions dispatch branded lifecycle emails (Accepted, Waitlist, Promotion) via Resend SDK from `email_outbox`. |
 
 ## Proposed defaults for implementation
 

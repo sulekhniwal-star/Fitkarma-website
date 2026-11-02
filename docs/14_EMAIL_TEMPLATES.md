@@ -32,28 +32,30 @@ FitKarma बीटा कार्यक्रम में आवेदन क�
 
 ## 3. Phase 1 accepted — English
 
-**Subject:** You're in! Your FitKarma Phase 1 VIP Beta Pass (#{{seat_number}})
+**Subject:** You're in — FitKarma Phase 1 beta
 
 Hi {{first_name}},
 
-Congratulations — your email has been verified and you have secured an official place in the FitKarma Phase 1 beta.
+Congratulations — your email has been verified and your application has secured a place in the FitKarma Phase 1 beta.
 
 **Your Reserved Seat:** `VIP SEAT #{{seat_number}}` (out of 1,000)  
 **Reference ID:** `{{application_reference}}`
 
 ### Your VIP Beta Pass Card
-You can view, download, and share your digital pass card anytime here:  
+You can view and download your digital pass card here:  
 **[View My VIP Beta Pass]({{pass_url}})**
 
-We will notify you by email as soon as beta access opens. FitKarma features will roll out progressively to Phase 1 participants.
+*(Note: The link above uses a secure, single-recipient signed token. If opened on an unrecognized browser after token expiration, a quick email verification code will be sent to confirm access.)*
 
-Thank you for being part of the first 1,000 shaping India's AI-powered wellness ecosystem.
+We will notify you by email as soon as your beta access opens. FitKarma capabilities will roll out progressively to Phase 1 participants.
+
+Thank you for helping shape FitKarma — India's AI-powered Fitness and Wellness Ecosystem.
 
 — Team FitKarma
 
 ## 4. Phase 1 accepted — Hindi
 
-**विषय:** बधाई हो! आपका FitKarma Phase 1 VIP बीटा पास (#{{seat_number}})
+**विषय:** बधाई हो — FitKarma Phase 1 बीटा में आपका स्थान पक्का हो गया है
 
 नमस्ते {{first_name}},
 
@@ -63,16 +65,14 @@ Thank you for being part of the first 1,000 shaping India's AI-powered wellness 
 **संदर्भ संख्या:** `{{application_reference}}`
 
 ### आपका डिजिटल VIP बीटा पास
-आप अपना डिजिटल पास कार्ड यहाँ देख, डाउनलोड और शेयर कर सकते हैं:  
+आप अपना डिजिटल पास कार्ड यहाँ देख और डाउनलोड कर सकते हैं:  
 **[मेरा VIP बीटा पास देखें]({{pass_url}})**
+
+*(नोट: ऊपर दिया गया लिंक एक सुरक्षित, हस्ताक्षरित टोकन का उपयोग करता है। यदि टोकन समाप्त होने के बाद यह किसी अन्य ब्राउज़र पर खोला जाता है, तो पुष्टि के लिए आपके ईमेल पर एक सत्यापन कोड भेजा जाएगा।)*
 
 बीटा एक्सेस शुरू होने पर हम आपको ईमेल द्वारा सूचित करेंगे। Phase 1 सदस्यों के लिए सुविधाएँ चरणबद्ध तरीके से जारी की जाएँगी।
 
-भारत के पहले AI-संचालित वेलनेस इकोसिस्टम का हिस्सा बनने के लिए धन्यवाद।
-
-— FitKarma टीम
-
-FitKarma को बेहतर बनाने में मदद करने के लिए धन्यवाद।
+FitKarma — भारत का AI-संचालित Fitness और Wellness Ecosystem — को आकार देने में मदद करने के लिए धन्यवाद।
 
 — FitKarma टीम
 
@@ -136,11 +136,50 @@ FitKarma के पहले बीटा समूह का हिस्सा
 
 — FitKarma टीम
 
+## 9. Phase 1 waitlist promotion — English (D-029)
+
+**Subject:** Update on your FitKarma beta status — You're in Phase 1
+
+Hi {{first_name}},
+
+Great news! A spot has opened up in the FitKarma Phase 1 beta, and because of your position on the verified waitlist, you have been automatically promoted to Phase 1.
+
+**Your Allocated Seat:** `VIP SEAT #{{seat_number}}` (reallocated sequentially upon withdrawal)  
+**Reference ID:** `{{application_reference}}`
+
+### Your VIP Beta Pass Card
+You can view and download your updated digital pass card here:  
+**[View My VIP Beta Pass]({{pass_url}})**
+
+We'll email you with instructions as soon as onboarding commences.
+
+— Team FitKarma
+
+## 10. Phase 1 waitlist promotion — Hindi (D-029)
+
+**विषय:** FitKarma बीटा स्थिति अपडेट — आपको Phase 1 में स्थान मिल गया है
+
+नमस्ते {{first_name}},
+
+शुभ समाचार! FitKarma Phase 1 बीटा में एक स्थान रिक्त हुआ है, और आपकी प्रतीक्षा सूची स्थिति के अनुसार आपको स्वचालित रूप से Phase 1 में प्रमोट कर दिया गया है।
+
+**आपका आवंटित स्थान:** `VIP SEAT #{{seat_number}}`  
+**संदर्भ संख्या:** `{{application_reference}}`
+
+### आपका डिजिटल VIP बीटा पास
+आप अपना अद्यतन पास कार्ड यहाँ देख और डाउनलोड कर सकते हैं:  
+**[मेरा VIP बीटा पास देखें]({{pass_url}})**
+
+बीटा एक्सेस शुरू होने पर हम आपको ईमेल द्वारा निर्देश भेजेंगे।
+
+— FitKarma टीम
+
 ## Template implementation rules
 
 - Escape all interpolated values.
 - Use allowlisted absolute URLs from server configuration, never an arbitrary user-provided URL.
-- Do not include seat number unless owner wants it public; application reference is safer.
+- **Seat Number & Personal Privacy:** Never put seat numbers, application IDs, tokens, or personal identifiers in email subject lines. Seat numbers may be presented in the body of verified transactional emails only.
+- **`{{pass_url}}` Token Security:** `{{pass_url}}` must always resolve via an unguessable, cryptographically signed, revocable token (`/beta/pass?token=<token>`). If opened on an unauthenticated device or after token expiration, re-verification by email OTP is strictly required before rendering the pass. Never expose predictable integer IDs in URLs.
 - No access date promise unless approved and operationally confirmed.
-- Never include password, OTP, auth token, medical data or private admin information in email logs.
+- Never include passwords, raw OTPs, auth tokens, medical data, or private admin information in application logs.
 - Send Phase 2 share campaign only after explicit owner approval and only to eligible Phase 1 recipients.

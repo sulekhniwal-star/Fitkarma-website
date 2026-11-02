@@ -49,9 +49,9 @@
 - Feature priority is stored exactly as an allowed value.
 - Consent versions/timestamps are recorded as specified.
 - Optional marketing consent remains false unless the user explicitly checks it.
-- Phone number and health information are not present in the form or schema.
+- Phone numbers and clinical/medical data (symptoms, diagnoses, clinical records, medications) are strictly absent from the form and database schema.
 
-## 4. Critical capacity/concurrency tests
+## 4. Critical capacity, concurrency & promotion tests
 
 Create a deterministic integration/load test using an isolated test database:
 
@@ -63,7 +63,14 @@ Create a deterministic integration/load test using an isolated test database:
 6. Assert there is no duplicate seat, no seat 1,001 and no negative/over-capacity count.
 7. Replay successful confirmation calls; assert accepted/waitlist status and seat number do not change and duplicate emails are not created.
 8. Inject transaction failures; assert no partial seat assignment without corresponding status/outbox intent.
-9. Run the same test with multiple app/server instances if supported by the test environment.
+9. **Waitlist Promotion Test (D-029):**
+   - Take a verified Phase 1 applicant with assigned seat (e.g. `#0042`) and trigger withdrawal (`withdrawn_at = now()`, status = `withdrawn`).
+   - Execute the atomic promotion database function.
+   - Assert the earliest verified applicant in `phase2_waitlist` is promoted to `phase1_accepted`.
+   - Assert they inherit the vacated seat number (`#0042`) to preserve contiguous seat allocation.
+   - Assert an audit entry is recorded in `audit_events`.
+   - Assert an outbox record for template `phase1_promotion` is queued in `email_outbox`.
+10. Run the same test with multiple app/server instances if supported by the test environment.
 
 This is a release blocker. Do not rely on a visual counter or manual inspection.
 

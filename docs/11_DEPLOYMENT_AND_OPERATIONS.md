@@ -45,21 +45,21 @@ Use a Vercel-provided preview address during development. Keep canonical URL, re
 
 ## 5. Secrets and Environment Schema
 
-Maintain an up-to-date `.env.example` in the repository with the following schema:
+Maintain an up-to-date `.env.example` in the repository with the following schema using strictly non-production placeholder values:
 
 ```bash
-# Public Client Variables
-NEXT_PUBLIC_APP_URL=https://fitkarma.in
+# Public Client Variables (Use Vercel preview or localhost in dev; custom domain set only after purchase)
+NEXT_PUBLIC_APP_URL=https://<project-id>.vercel.app
 NEXT_PUBLIC_SUPABASE_URL=https://<your-project-ref>.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOi...
 
 # Server-Only Secrets (Never expose to client or client bundles)
 SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOi...
 RESEND_API_KEY=re_123456789...
-RESEND_FROM_EMAIL="FitKarma <beta@fitkarma.in>"
+RESEND_FROM_EMAIL="FitKarma Beta <noreply@example.com>"
 
-# Admin Access Allowlist (Comma-separated admin emails)
-ADMIN_EMAIL_ALLOWLIST="sulekhniwal@gmail.com,admin@fitkarma.in"
+# Admin Access Allowlist (Comma-separated admin emails using organization placeholders)
+ADMIN_EMAIL_ALLOWLIST="admin@example.com,owner@example.com"
 
 # Rate Limiting (Optional Upstash Redis for Edge rate limiting)
 UPSTASH_REDIS_REST_URL=https://...

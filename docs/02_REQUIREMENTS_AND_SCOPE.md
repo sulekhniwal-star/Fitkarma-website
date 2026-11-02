@@ -10,7 +10,7 @@
   - `/about` — Origin story, mission, and India-first wellness philosophy.
   - `/beta` — Dedicated Beta Application page with live Phase 1 capacity counter (1,000 spot ceiling) and spot reservation.
   - `/faq` — Searchable categorized FAQ.
-  - `/privacy` & `/terms` — DPDP 2025 compliant privacy notice and beta terms.
+  - `/privacy` & `/terms` — Clear privacy notice and beta programme terms pending final legal counsel review.
   - `/auth/verify` — Double opt-in OTP / magic link verification handler.
 - Responsive bilingual support (English-first launch with seamless instant Hindi language toggle).
 - Premium Dark Mode (Linear / Apple style) with obsidian backgrounds, glowing borders, and crisp typography.
@@ -125,52 +125,47 @@ The website must not publish prices, promise payment features or imply paid tier
 
 ## 3. Beta registration form
 
-### Required fields (recommended defaults; owner approval recorded as proposed in the decision register)
+### Required fields (aligned with Decision D-036)
 
 - `full_name` — required; trimmed; reasonable length limit.
 - `email` — required; normalized; valid format; unique per programme.
-- `primary_feature_interest` — required single-select choice from the approved feature list below.
+- `health_goals` — required multi-select array (at least 1 choice from high-level lifestyle wellness goals: *Weight Loss & Metabolism*, *Lean Muscle & Strength*, *Gut Health & Digestion*, *Daily Energy & Stamina*, *Sustained Habit Consistency*).
+- `feature_priorities` — required multi-select array (choose features of interest from the approved feature inventory below).
 - `privacy_notice_version` and `beta_terms_version` — stored server-side with acceptance timestamps.
 - `email_verified_at` — set only by the trusted verification callback.
 
 ### Optional fields
 
-- `device_platform`: Android / iOS / Both / Not sure.
-- `preferred_language`: English / Hindi.
-- `other_feature_interest_text`: short text only when `Other` selected; max 250 characters; warn users not to enter health information.
+- `device_platform`: `android` / `ios` / `both`.
+- `preferred_language`: `en` / `hi`.
+- `other_feature_text`: short text only when `Other` is selected; max 250 characters; warn users strictly not to enter personal medical information.
 
-Do not collect phone number, age, date of birth, city, gender, weight, health metrics, diagnosis, medication, symptoms or precise location on this form.
+Do not collect phone number, age, date of birth, city, gender, clinical records, medications, symptoms, or diagnoses on this form.
 
-### Feature-priority options
+### Feature-priority options (Multi-select)
 
-Ask: **“Which FitKarma feature are you most looking forward to?”** Select one primary priority.
+Ask: **“Which FitKarma capabilities matter most to you?”** (Multi-select from feature directory + optional other)
 
-1. AI meal analysis and food photo recognition
-2. Indian food database, regional recipes and realistic portions
-3. WhatsApp text and voice-based food logging
-4. Offline-first health and nutrition tracking
-5. Google Health Connect and Apple Health integration
-6. Daily Intelligence Package and personalised health insights
-7. Dynamic TDEE and adaptive goals
-8. Family Recipe Splitter and Family Care Dashboard
-9. Women's health and cycle-aware wellness
-10. Festival/fasting and AQI-aware recommendations
-11. Ayurveda and lifestyle personalisation
-12. CGM, metabolic health and advanced recovery
-13. Challenges, Karma points and family/corporate wellness
-14. More Indian languages and conversational AI
-15. Other (optional short explanation)
+1. Indian nutrition database, regional recipes and realistic household portions (katori/roti)
+2. Daily Intelligence Package (DIP) and contextual health insights
+3. AI meal photo recognition and instant portion analysis
+4. WhatsApp text and voice-based meal logging
+5. Offline-first tracking foundations
+6. Google Health Connect and Apple Health platform synchronization
+7. Family-aware wellness tools and Family Recipe Splitter
+8. Dynamic TDEE and metabolic recovery
+9. Women's cycle-aware health tracking
+10. Festival/fasting modes and regional seasonal adjustments
+11. Other (optional short explanation)
 
-These are research categories drawn from the master product scope. Do not imply every item is live today.
-
-## 4. Registration status vocabulary
+### 4. Registration status vocabulary
 
 Use explicit statuses, not ambiguous booleans:
 
-- `pending_email_verification`
+- `pending_verification`
 - `phase1_accepted`
 - `phase2_waitlist`
-- `invited_phase2` (optional when Phase 2 opens and an invitation is sent)
+- `invited_phase2` (when Phase 2 opens and an invitation is sent)
 - `withdrawn`
 - `rejected_abuse` (admin-only, reason logged; do not expose internal reason publicly)
 

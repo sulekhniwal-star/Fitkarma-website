@@ -19,7 +19,7 @@ The beta website collects only the essential parameters necessary to verify an a
 
 ### Social Sharing & VIP Pass Privacy
 - The downloadable/shareable **VIP Beta Pass** displays only the applicant's first name, sequential seat number (e.g. `VIP SEAT #0042`), and issue date.
-- Social share URLs (for WhatsApp and X) point to the public `/beta` or `/` landing page with an optional generic invite referral tag; they **never** include the applicant's email address, full legal name, private session token, or database UUID in query strings.
+- Social share URLs (for WhatsApp and X) point strictly to the canonical, public `/beta` or `/` landing page without personal referral codes, tracking parameters, email addresses, full legal names, private session tokens, or database UUIDs (aligned with Decision D-015 and 02 forbidden referral tracking).
 
 ## 2. Notice, purpose and consent
 

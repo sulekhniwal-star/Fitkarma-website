@@ -120,6 +120,6 @@ Do not use a fake countdown timer or simulated live counter. A count must come f
 - Positioning statement
 - Features, Beta, FAQ
 - Privacy Notice, Beta Terms
-- Support email (OPEN DECISION until owner supplies it)
+- Official support contact email (Approved Decision D-026: `sulekhniwal@gmail.com`)
 - Copyright year generated at build/runtime; no fake company legal details
 - Language switch

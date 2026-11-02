@@ -12,21 +12,22 @@
    - Features Needed Most from Feature Inventory (multi-select: *Indian Nutrition & Household Portions*, *Daily Intelligence Package (DIP)*, *AI Photo Food Logging*, *WhatsApp Text & Voice Logging*, *Connected Health Sync*, *Family-Aware Wellness*) + optional custom "Other" text input.
 4. Visitor acknowledges beta terms and privacy notice (un-ticked promotional consent separate).
 5. Server validates inputs, checks honeypot/rate-limits, and inserts pending verification record.
-6. System sends a one-time transactional verification code / magic link via Resend.
+6. System sends a one-time verification link / OTP via Supabase Auth (configured with custom SMTP).
 7. User enters the OTP or clicks the magic link (`/auth/verify`).
-8. PostgreSQL atomic transaction executes `allocate_beta_seat(user_id)`:
+8. PostgreSQL atomic transaction executes `confirm_and_allocate_application(application_id, verified_identity)`:
    - If Phase 1 has `< 1,000` accepted seats, atomically assigns the next sequential seat number (`#0001` to `#1000`) with status `phase1_accepted`.
-   - If Phase 1 is full (`>= 1,000`), assigns status `phase2_waitlist` with queue number.
+   - If Phase 1 is full (`>= 1,000`), assigns status `phase2_waitlist` with queue allocation order timestamp.
 9. **VIP Beta Pass Generation:** User is redirected to `/auth/verify` which renders their dynamic, holographic **VIP Beta Pass**:
    - Displays applicant name, allocated seat badge (e.g., `VIP SEAT #0042`), and issue date.
-   - Provides a 1-click **Download Pass (PNG)** button and **Share to WhatsApp** & **Share to X** buttons with pre-filled text.
-10. System sends the official confirmation email via Resend containing a digital copy of their pass.
+   - Access to the pass is secured with a signed, unguessable, revocable token (`/beta/pass?token=<token>`).
+   - Provides a 1-click **Download Pass (PNG)** button and **Share to WhatsApp** & **Share to X** buttons (with clean canonical links and zero personal tracking parameters).
+10. System queues the official confirmation email via Resend containing a digital copy of their pass.
 
 ## 2. First-come, first-served rule
 
-**Proposed rule pending owner approval (Decision O-013):** allocate in the order that the server/database successfully verifies email and commits the seat. This prevents unverified addresses from holding places. Do not use when the user first opened the form, a browser timestamp or a client-supplied seat number. If the owner instead wants FIFO by initial application submission time, the system must define a verification deadline and reservation/expiry policy before implementation.
+**Approved Rule (Decision D-028):** Allocation is ordered strictly by successful email verification timestamp (`allocation_order_at`). This prevents unverified addresses from holding places. Seats are allocated atomically upon email verification.
 
-When two or more verified users arrive concurrently, the database serializes allocation so each receives a distinct seat and the accepted count never exceeds capacity. The exact transaction/locking implementation must be tested under concurrent load.
+When two or more verified users arrive concurrently, the database serializes allocation so each receives a distinct seat and the accepted count never exceeds capacity. The exact transaction/locking implementation is validated under concurrent load tests.
 
 ## 3. Phase 1 is full
 
@@ -53,7 +54,7 @@ When two or more verified users arrive concurrently, the database serializes all
 - Duplicate email with casing/spacing differences: normalize and deduplicate.
 - Email provider failure: keep application pending, show retry/resend instructions and expose an admin operational event.
 - Applicant changes email: create a new verification flow; do not transfer a seat without a verified, audited process.
-- Withdrawal: mark withdrawn or delete according to approved retention/legal policy; release a Phase 1 seat only under a documented rule. Seat release/reallocation behaviour is an OPEN decision and must not be invented.
+- Withdrawal and Reallocation (Approved Decision D-029): When a Phase 1 accepted applicant withdraws or requests erasure, their status is set to `withdrawn`. The atomic database function `promote_waitlist_applicant` automatically promotes the earliest verified `phase2_waitlist` applicant to `phase1_accepted`, reassigns the vacated seat number, records an audit log in `audit_events`, and queues a promotion notification email in `email_outbox`.
 
 ## 6. Admin workflow
 

@@ -29,20 +29,22 @@ Tasks:
   - Connected Health, Offline-first, and Family Wellness cards.
 - **About (`/about`):** FitKarma origin story, mission, the cultural need for India-specific health intelligence, and data privacy commitments.
 - **FAQ (`/faq`):** Searchable, animated accordion answering key beta, nutrition, and privacy questions.
-- **Legal (`/privacy`, `/terms`):** Polished, legally compliant DPDP 2025 privacy notice and beta terms.
+- **Legal (`/privacy`, `/terms`):** Clear privacy notice and beta programme terms pending final legal counsel review.
 
 Acceptance: Multi-page navigation is fluid with zero layout shift, interactive simulators work flawlessly, visual punch matches the Linear/Apple dark aesthetic, and all copy is localized.
 
-## Milestone 2 — Beta Application, Verification & Seat Allocation
+## Milestone 2 — Beta Application, Verification, Seat Allocation & Promotion
 
-**Goal:** Implement the dedicated `/beta` page with strict atomic 1,000 Phase 1 seat reservation and double opt-in verification.
+**Goal:** Implement the dedicated `/beta` page with strict atomic 1,000 Phase 1 seat reservation, double opt-in verification, and automated waitlist promotion.
 
 Tasks:
-- **Beta Page (`/beta`):** Live verified seat counter (1,000 cap), dynamic progress bar, and frictionless multi-step registration form (Name, Email, Multi-select Feature Interests, Platform preference).
-- **Supabase Database Schema:** Migrations for `applications`, `phases`, `outbox`, and `audit_logs` with Row Level Security (RLS).
-- **Atomic Allocation Function:** PostgreSQL function enforcing strict FIFO allocation by email verification timestamp, auto-transitioning to Phase 2 waitlist at 1,000 seats.
-- **Double Opt-In Email Verification:** Resend transactional email dispatch with React Email template containing secure OTP / magic link.
-- **Verification Callback (`/auth/verify`):** Confirms email, triggers atomic seat assignment, and renders personalized reservation status card.
+- **Beta Page (`/beta`):** Live verified seat counter (1,000 cap), dynamic progress bar, and frictionless multi-step registration form (Name, Email, Health Goals, Multi-select Feature Interests, Platform preference).
+- **Supabase Database Schema:** Migrations for `beta_applications`, `beta_phases`, `email_outbox`, and `audit_events` with Row Level Security (RLS).
+- **Email Verification Path (ADR):** Supabase Auth handles email verification OTP/magic link via configured SMTP/Resend integration.
+- **Atomic Allocation Function:** PostgreSQL function enforcing strict FIFO allocation by email verification timestamp, assigning seat numbers 1–1,000, and auto-transitioning to `phase2_waitlist` once 1,000 seats are filled.
+- **Seat Reallocation & Waitlist Promotion (D-029):** Atomic promotion function: when a Phase 1 user withdraws, automatically promote the earliest verified `phase2_waitlist` applicant to `phase1_accepted`, assign the vacated seat number, record an audit event, and queue a promotion email.
+- **Transactional Lifecycle Emails:** Next.js server actions / worker dispatching Phase 1 accepted, Phase 2 waitlist, and Phase 1 promotion emails via Resend SDK from `email_outbox`.
+- **Verification & Pass Callback (`/auth/verify`):** Confirms email token, triggers atomic seat assignment, and renders personalized VIP Beta Pass card with signed unguessable access token.
 
 ## Milestone 3 — Admin console
 

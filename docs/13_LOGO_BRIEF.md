@@ -2,7 +2,7 @@
 
 ## 1. Status
 
-**APPROVED & INTEGRATED:** The official FitKarma vector brand identity suite is complete and stored in [`FitKarma-Logo/`](file:///f:/Fitkarma-website/FitKarma-Logo).
+**APPROVED & INTEGRATED:** The official FitKarma vector brand identity suite is complete and stored in repository directory `FitKarma-Logo/`.
 
 ## 2. Core Identity & Color Tokens
 
@@ -38,3 +38,11 @@ The repository contains scalable vector (SVG) and raster (PNG) assets ready for 
 - Use `fitkarma-mark.svg` as the primary favicon and browser icon in `app/icon.svg`.
 - The floating dynamic glass pill navbar uses `fitkarma-wordmark-dark.svg` or `fitkarma-mark.svg` with dynamic hover glow.
 - When generating the VIP Beta Pass card, embed `fitkarma-mark.svg` as a holographic watermark.
+
+## 5. Trademark Clearance & Legal Verification Checklist
+
+Before public launch or commercial marketing:
+- **Similarity & Trademark Clearance:** Conduct formal trademark availability searches across Indian IP databases (Controller General of Patents, Designs and Trade Marks) for wordmark `FitKarma` and device mark in Classes 9 (computer software/apps) and 44 (health and wellness).
+- **Distinctiveness Verification:** Ensure the stylized running-figure geometry does not conflict with existing registered athletic, healthcare, or consumer fitness trademarks.
+- **Production Asset Hardening:** Convert all SVG text elements into outlined bezier vector paths so fonts do not rely on local system font rendering.
+- **Final Owner Sign-Off:** The legal entity owner must sign off on the trademark filing strategy and final vector outlines.

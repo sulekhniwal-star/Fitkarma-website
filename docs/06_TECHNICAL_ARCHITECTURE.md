@@ -17,31 +17,31 @@
 
 ```text
 Browser
-  ├── Next.js localized pages (/en, /hi)
-  ├── Public beta application form
-  └── Protected admin UI
+  ├── Next.js multi-page routes (/, /features, /about, /beta, /faq)
+  ├── Public beta application form (/beta)
+  └── Protected admin UI (/admin)
           │
           ▼
 Next.js server actions / route handlers
-          ├── Input validation + normalisation
-          ├── Rate limit + bot checks
-          ├── Supabase Auth email verification
-          ├── Privileged admin authorization
-          └── Email provider adapter
-                  │
-                  ▼
-Supabase
-  ├── PostgreSQL (applications, phases, outbox, audit)
-  ├── Auth (email magic link/OTP and admin auth)
-  ├── RLS and database grants
-  └── Transactional allocation function
-                  │
-                  ▼
-Transactional email provider
-  ├── Verification email
-  ├── Phase 1 accepted email
-  ├── Phase 2 waitlist email
-  └── Approved Phase 2 announcement/invitation
+  ├── Input validation & normalisation (Zod)
+  ├── Edge rate limiting & honeypot validation
+  ├── Supabase Auth signup (triggers verification email via Supabase Auth SMTP)
+  ├── Verification callback route (/auth/verify) -> executes atomic allocation
+  └── Transactional lifecycle email worker -> dispatches via Resend SDK
+          │
+          ├─────────────────────────────────────────────────┐
+          ▼                                                 ▼
+Supabase Auth                                     Supabase PostgreSQL
+  ├── Passwordless OTP/Magic Link                   ├── beta_applications (applicant records)
+  ├── MFA Admin Auth                                ├── beta_phases (Phase 1 cap: 1,000)
+  └── Custom SMTP / Resend Hook                      ├── email_outbox (transactional jobs)
+          │                                         └── audit_events (audit trail)
+          ▼ (Verification Email)                            │
+Resend SMTP Service                                         ▼ (Lifecycle Emails)
+  └── Sends Verification OTP/Link to user         Resend SDK (Next.js Server Worker)
+                                                    ├── Phase 1 Accepted + VIP Pass Email
+                                                    ├── Phase 2 Waitlist Email
+                                                    └── Phase 1 Promotion Email (D-029)
 ```
 
 ## 3. Responsibilities
@@ -139,4 +139,11 @@ The agent may adjust the exact layout to current Next.js conventions, but must p
 
 ## 8. Architecture decision records
 
-Create an ADR for material changes including database provider, authentication method, email provider, rate-limit service, analytics, CMS, custom domain architecture, or changes to seat allocation semantics.
+### ADR-001: Separation of Verification Auth Email and Application Lifecycle Email Dispatch
+
+- **Status:** APPROVED (Decision D-038).
+- **Context:** Supabase Auth is our engine for passwordless identity verification (one-time OTP / magic links sent to `/auth/verify`), while Resend is our transactional email provider for branded lifecycle emails (Phase 1 acceptance with VIP Beta Pass, Phase 2 waitlist, Phase 1 waitlist promotion). If application code generated and sent raw authentication links itself, it would bypass Supabase Auth rate limits, leak tokens, and duplicate auth state.
+- **Decision:**
+  1. **Authentication Email (OTP / Magic Link):** Handled exclusively by **Supabase Auth**. In production, Supabase Auth is configured with custom SMTP credentials pointing to Resend SMTP (or Supabase Auth Send Email Hook calling Resend API directly). The auth token/link template is managed within Supabase Auth configuration.
+  2. **Application Lifecycle Emails (`phase1_accepted`, `phase2_waitlist`, `phase1_promotion`):** Handled exclusively by the **Application Server (Next.js server action / worker)** reading from `email_outbox` and dispatching through the Resend Node.js SDK using custom React Email components (`@react-email/components`).
+- **Consequences:** Clear architectural separation. Next.js application code never generates, inspects, or sends raw authentication secrets. `email_outbox` is strictly dedicated to post-allocation application lifecycle notifications.

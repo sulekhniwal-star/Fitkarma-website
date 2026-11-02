@@ -78,11 +78,9 @@ Optional normalized record of notice/terms/marketing consent versions and timest
 - Withdrawal -> `withdrawn` with approved policy; seat release behaviour is not defined until owner/legal decision.
 - Admin status change must be audited and constrained; do not allow arbitrary direct enum transitions.
 
-## 3. Atomic Phase 1 allocation contract
+## 3. Atomic Phase 1 allocation & promotion contracts
 
-Create a database function or transaction-backed server operation equivalent to:
-
-`confirm_and_allocate_application(application_id, verified_auth_identity)`
+### A. Initial Allocation: `confirm_and_allocate_application(application_id, verified_auth_identity)`
 
 The operation must:
 
@@ -90,12 +88,25 @@ The operation must:
 2. Lock the Phase 1 capacity/phase row or use another proven serialization mechanism.
 3. Return current status if allocation was already completed (idempotency).
 4. Count/allocate under the same transaction.
-5. If Phase 1 is open and accepted seats are fewer than 1,000, allocate the next unique seat and set `phase1_accepted`.
-6. Otherwise set `phase2_waitlist` (subject to current waitlist policy).
-7. Insert the matching email outbox job with a unique idempotency key.
+5. If Phase 1 is open and accepted seats are fewer than 1,000, allocate the next unique sequential seat (1 to 1,000) and set `phase1_accepted`.
+6. Otherwise set `phase2_waitlist` with allocation timestamp.
+7. Insert the matching email outbox job into `email_outbox` with a unique idempotency key.
 8. Commit all state together.
 
 The database constraint/transaction must make it impossible for concurrency or retries to create seat 1,001 or duplicate an existing seat. A frontend check is not acceptable.
+
+### B. Waitlist Promotion on Withdrawal (D-029): `promote_waitlist_applicant(withdrawn_application_id)`
+
+When an accepted Phase 1 user withdraws or requests erasure:
+1. Mark the withdrawing application as `withdrawn` and record `withdrawn_at = now()`. The vacated `seat_number` is captured.
+2. Select the earliest verified applicant with status `phase2_waitlist`, ordered strictly by `allocation_order_at ASC` (FIFO).
+3. Update the promoted applicant:
+   - `status = 'phase1_accepted'`
+   - `seat_number = vacated_seat_number` (assigns the freed sequential seat to maintain continuous 1–1,000 capacity)
+   - `decision_at = now()`
+4. Insert an audit record into `audit_events` logging the promotion and reassigned seat number.
+5. Queue a transactional promotion email in `email_outbox` with template `phase1_promotion`.
+6. Commit state atomically.
 
 ## 4. Public API shape (illustrative contract)
 
@@ -107,8 +118,9 @@ Input:
 {
   "fullName": "Example Person",
   "email": "person@example.com",
-  "primaryFeatureInterest": "indian_nutrition",
-  "otherFeatureInterestText": null,
+  "healthGoals": ["weight_loss", "energy"],
+  "featurePriorities": ["indian_nutrition", "dip_intelligence"],
+  "otherFeatureText": null,
   "devicePlatform": "android",
   "preferredLanguage": "en",
   "privacyNoticeVersion": "v1",
@@ -127,11 +139,12 @@ Response must not reveal whether an email is already registered in a way that en
 - Generic response to avoid account enumeration.
 - Enforces cooldown and max attempts.
 
-### `GET /auth/confirm`
+### `GET /auth/verify`
 
 - Validate one-time Supabase Auth token/hash using the official supported verification flow.
 - Redirect only to allowlisted site URLs.
 - Call atomic allocation operation after identity verification.
+- Render verification pass view or error state.
 - Never trust arbitrary `next`/redirect query parameters.
 
 ### Admin APIs

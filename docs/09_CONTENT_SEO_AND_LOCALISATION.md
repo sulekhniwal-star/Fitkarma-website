@@ -27,11 +27,11 @@ Every public route includes localized metadata, Open Graph cards, Twitter cards,
 | `/about` | About FitKarma \| Why India Needs a Dedicated Health Ecosystem | Learn why Western fitness trackers fail in Indian households and how FitKarma is building a modern, India-first alternative. |
 | `/beta` | Join Beta \| FitKarma — Reserve Your Phase 1 Access Spot | Apply for the FitKarma Phase 1 beta. Limited to 1,000 verified places. Reserve your VIP Beta Pass today. |
 | `/faq` | Frequently Asked Questions — FitKarma Beta & Tracking | Common questions regarding beta rollout, Indian food tracking accuracy, device connectivity, and data privacy. |
-| `/privacy` | Privacy Notice — FitKarma \| DPDP 2025 Aligned | Learn how FitKarma respects your privacy, handles consent, and protects personal data. |
+| `/privacy` | Privacy Notice — FitKarma | Learn how FitKarma respects your privacy, handles consent, and protects personal data. |
 | `/terms` | Beta Programme Terms — FitKarma | Terms and conditions governing participation in the progressive FitKarma beta programme. |
 
 ### Dynamic Open Graph & Social Cards
-- Implemented via Next.js `ImageResponse` (`@vercel/og`) in `app/opengraph-image.tsx`.
+- Implemented via Next.js `ImageResponse` (imported from `next/og`) in `app/opengraph-image.tsx`.
 - Renders the approved obsidian background (`#0D0F12`), glowing emerald/amber aura, official FitKarma logo lockup, and page-specific dynamic headlines.
 - `noindex, nofollow` strictly applied to `/auth/verify`, `/admin/*`, and internal preview routes.
 

@@ -94,4 +94,4 @@ Store tokens centrally (CSS variables/Tailwind theme). Do not duplicate hex valu
 - `color.canvas`, `color.surface.1`, `color.surface.2`, `color.text.primary`, `color.text.secondary`, `color.accent.primary`, `color.accent.secondary`, `color.border`, `color.success`, `color.warning`, `color.error`
 - spacing scale, radius scale, shadow/elevation scale, type scale, max content width, breakpoints, motion duration/easing
 
-Accent tokens are provisional until owner approves logo and palette.
+Accent tokens and palette are APPROVED per Decision D-017 and D-008, matching the vector brand library in `FitKarma-Logo/`.
