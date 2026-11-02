@@ -82,3 +82,4 @@ describe('Indian Meal Sandbox Calculator Engine', () => {
     expect(Number.isNaN(result.fats)).toBe(false);
   });
 });
+

@@ -33,3 +33,4 @@ describe('Daily Intelligence Package (DIP) Engine', () => {
     expect(fallback.period).toBe('morning');
   });
 });
+

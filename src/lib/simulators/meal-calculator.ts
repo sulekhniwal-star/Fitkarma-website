@@ -232,3 +232,4 @@ export function calculateMealMacros(
     fiber: Math.round(totalFiber * 10) / 10,
   };
 }
+

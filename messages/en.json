@@ -15,10 +15,69 @@
   "nav": {
     "home": "Home",
     "features": "Features",
-    "simulators": "Simulators",
+    "simulators": "Features",
     "about": "Our Mission",
     "beta": "VIP Beta Pass",
     "faq": "FAQ"
+  },
+  "features": {
+    "hero": {
+      "badge": "Interactive Product Walkthrough",
+      "title": "Health Intelligence Built for Indian Lifestyles",
+      "subtitle": "Explore our core capabilities on the right — the interactive simulation on the left stays fixed and adapts to whatever feature you are viewing."
+    },
+    "nav_pills": {
+      "nutrition": "01. Household Nutrition",
+      "dip": "02. Daily Intelligence (DIP)",
+      "scanner": "03. 3D AI Food Scanner"
+    },
+    "cards": {
+      "nutrition": {
+        "badge": "Core Differentiator",
+        "status": "In Beta Testing",
+        "title": "Built for Indian Household Portions, Not Generic Grams",
+        "description": "Standard fitness apps demand gram scales, completely breaking down when faced with Indian home cooking. FitKarma is built around the authentic ways Indian families cook, serve, and eat.",
+        "point1_title": "Phulka & Roti Intelligence",
+        "point1_desc": "Tracks roti count with a single-tap Desi Ghee toggle, factoring in healthy lipid density (+45 kcal) without altering carb totals.",
+        "point2_title": "Katori Metric Standardization",
+        "point2_desc": "Measures dal, rice, and subzis in standard 150ml household katoris rather than confusing weight scales.",
+        "point3_title": "Tadka Intensity Modeling",
+        "point3_desc": "Captures the reality of Indian tempering — from minimal home-style oil to rich festive preparations.",
+        "point4_title": "4 Regional Thali Presets",
+        "point4_desc": "Instantly switch between authentic North, South, Bengali, and Western Indian dietary baselines.",
+        "interactive_hint": "← Try adjusting the sliders on the left device to see instant live macro recalculations."
+      },
+      "dip": {
+        "badge": "Circadian Intelligence",
+        "status": "In Beta Testing",
+        "title": "Daily Intelligence Package (DIP): Timely Pulses, Not Endless Counting",
+        "description": "Instead of passive calorie counting and anxiety-inducing alerts, FitKarma provides 3 curated contextual pulses aligned with your metabolic circadian rhythm.",
+        "point1_title": "07:00 Morning Readiness",
+        "point1_desc": "Sleep architecture score, resting heart rate, and high-protein breakfast prompts (e.g. Moong dal chilla) to steady midday glucose.",
+        "point2_title": "13:30 Midday Nudge",
+        "point2_desc": "Hydration tracking and a 10-minute post-prandial stroll prompt to flatten post-lunch glucose spikes.",
+        "point3_title": "21:00 Evening Debrief",
+        "point3_desc": "Daily Karma score, restorative wind-down schedule, and warm turmeric latte recommendations.",
+        "point4_title": "Adaptive Rhythm",
+        "point4_desc": "Evolves with your schedule rather than forcing rigid, unrealistic dietary regimes.",
+        "interactive_hint": "← Switch between Morning, Midday, and Evening tabs on the left to preview contextual intelligence."
+      },
+      "scanner": {
+        "badge": "Computer Vision",
+        "status": "Beta Preview",
+        "title": "3D AI Food Scanner: Camera Intelligence for Home Cooking",
+        "description": "Mixed gravies, composite thalis, and home-cooked dishes confuse generic barcode scanners. FitKarma uses proprietary multi-component computer vision trained on 2,500+ Indian culinary recipes.",
+        "point1_title": "Multi-Component AR Segmentation",
+        "point1_desc": "Simultaneously identifies rotis, dal, subzi, and rice on a single plate with bounding-box certainty.",
+        "point2_title": "Instant Macro Extraction",
+        "point2_desc": "Estimates portion volume and lipid density right from the camera frame without manual lookups.",
+        "point3_title": "One-Tap Daily Logging",
+        "point3_desc": "Adds composite plates directly to your Daily Karma record in under 2 seconds.",
+        "point4_title": "Works with Regional Dishes",
+        "point4_desc": "Recognizes complex home meals from Dosas and Sambar to Dal Makhani and Biryanis.",
+        "interactive_hint": "← Click the shutter button on the 3D phone to your left to simulate real-time AI food recognition."
+      }
+    }
   },
   "hero": {
     "eyebrow": "Exclusive VIP Beta Access",

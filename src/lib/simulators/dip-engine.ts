@@ -134,3 +134,4 @@ export const DIP_PULSES: Record<DipTimeOfDay, DipPulse> = {
 export function getDipPulse(period: DipTimeOfDay): DipPulse {
   return DIP_PULSES[period] || DIP_PULSES.morning;
 }
+

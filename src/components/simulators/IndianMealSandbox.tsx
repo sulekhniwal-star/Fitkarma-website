@@ -387,3 +387,4 @@ export function IndianMealSandbox() {
     </div>
   );
 }
+

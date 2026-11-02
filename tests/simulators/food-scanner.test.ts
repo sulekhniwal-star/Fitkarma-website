@@ -39,3 +39,4 @@ describe('AI Food Scanner Simulation Engine', () => {
     expect(Math.abs(thali.totalMacros.protein - summedProtein)).toBeLessThanOrEqual(0.1);
   });
 });
+

@@ -182,3 +182,4 @@ export const SCANNER_PRESETS: Record<ScannerDishId, ScannerPreset> = {
 export function getScannerPreset(id: ScannerDishId): ScannerPreset {
   return SCANNER_PRESETS[id] || SCANNER_PRESETS.thali;
 }
+
