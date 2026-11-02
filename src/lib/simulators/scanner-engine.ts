@@ -41,12 +41,12 @@ export interface ScannerPreset {
 export const SCANNER_PRESETS: Record<ScannerDishId, ScannerPreset> = {
   thali: {
     id: 'thali',
-    titleKey: 'simulators.food_scanner.dishes.thali',
-    subtitleKey: 'simulators.meal_sandbox.regions.north.desc',
+    titleKey: 'dishes.thali',
+    subtitleKey: 'dishes.thali',
     items: [
       {
         id: 'roti',
-        nameKey: 'simulators.food_scanner.items.roti',
+        nameKey: 'items.roti',
         confidence: 99,
         portionKey: '2x Whole Wheat (with Ghee)',
         calories: 240,
@@ -58,7 +58,7 @@ export const SCANNER_PRESETS: Record<ScannerDishId, ScannerPreset> = {
       },
       {
         id: 'dal',
-        nameKey: 'simulators.food_scanner.items.dal',
+        nameKey: 'items.dal',
         confidence: 97,
         portionKey: '1.5 Katori (Tadka Ghee)',
         calories: 195,
@@ -70,7 +70,7 @@ export const SCANNER_PRESETS: Record<ScannerDishId, ScannerPreset> = {
       },
       {
         id: 'bhindi',
-        nameKey: 'simulators.food_scanner.items.bhindi',
+        nameKey: 'items.bhindi',
         confidence: 95,
         portionKey: '1 Katori (Spiced)',
         calories: 115,
@@ -90,12 +90,12 @@ export const SCANNER_PRESETS: Record<ScannerDishId, ScannerPreset> = {
   },
   dosa: {
     id: 'dosa',
-    titleKey: 'simulators.food_scanner.dishes.dosa',
-    subtitleKey: 'simulators.meal_sandbox.regions.south.desc',
+    titleKey: 'dishes.dosa',
+    subtitleKey: 'dishes.dosa',
     items: [
       {
         id: 'dosa_crepe',
-        nameKey: 'simulators.food_scanner.items.dosa',
+        nameKey: 'items.dosa',
         confidence: 98,
         portionKey: '1 Crisp Crepe with Aloo Masala',
         calories: 280,
@@ -107,7 +107,7 @@ export const SCANNER_PRESETS: Record<ScannerDishId, ScannerPreset> = {
       },
       {
         id: 'sambar',
-        nameKey: 'simulators.food_scanner.items.sambar',
+        nameKey: 'items.sambar',
         confidence: 96,
         portionKey: '1 Katori Drumstick Sambar',
         calories: 95,
@@ -119,7 +119,7 @@ export const SCANNER_PRESETS: Record<ScannerDishId, ScannerPreset> = {
       },
       {
         id: 'chutney',
-        nameKey: 'simulators.food_scanner.items.chutney',
+        nameKey: 'items.chutney',
         confidence: 94,
         portionKey: 'Coconut & Tomato Chutneys',
         calories: 85,
@@ -139,12 +139,12 @@ export const SCANNER_PRESETS: Record<ScannerDishId, ScannerPreset> = {
   },
   biryani: {
     id: 'biryani',
-    titleKey: 'simulators.food_scanner.dishes.biryani',
-    subtitleKey: 'simulators.food_scanner.dishes.biryani',
+    titleKey: 'dishes.biryani',
+    subtitleKey: 'dishes.biryani',
     items: [
       {
         id: 'biryani_rice',
-        nameKey: 'simulators.food_scanner.items.biryani',
+        nameKey: 'items.biryani',
         confidence: 98,
         portionKey: 'Spiced Fragrant Basmati Plate',
         calories: 480,
@@ -156,7 +156,7 @@ export const SCANNER_PRESETS: Record<ScannerDishId, ScannerPreset> = {
       },
       {
         id: 'raita',
-        nameKey: 'simulators.food_scanner.items.raita',
+        nameKey: 'items.raita',
         confidence: 96,
         portionKey: '1 Katori Mint Cucumber Dahi',
         calories: 90,

@@ -12,9 +12,9 @@ describe('Daily Intelligence Package (DIP) Engine', () => {
       expect(pulse.recoveryScore).toBeGreaterThan(0);
       expect(pulse.recoveryScore).toBeLessThanOrEqual(100);
       expect(pulse.metrics.length).toBeGreaterThanOrEqual(3);
-      expect(pulse.titleKey).toContain('simulators.dip.periods');
-      expect(pulse.insightKey).toContain('simulators.dip.periods');
-      expect(pulse.actionKey).toContain('simulators.dip.periods');
+      expect(pulse.titleKey).toContain('periods');
+      expect(pulse.insightKey).toContain('periods');
+      expect(pulse.actionKey).toContain('periods');
     }
   });
 
