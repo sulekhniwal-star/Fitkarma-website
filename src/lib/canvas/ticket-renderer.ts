@@ -396,3 +396,4 @@ export function exportCanvasAsPng(canvas: HTMLCanvasElement, filename: string): 
   anchor.click();
   document.body.removeChild(anchor);
 }
+

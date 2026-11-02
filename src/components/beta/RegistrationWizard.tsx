@@ -481,3 +481,4 @@ export function RegistrationWizard() {
     </div>
   );
 }
+

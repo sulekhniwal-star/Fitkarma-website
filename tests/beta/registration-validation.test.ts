@@ -78,3 +78,4 @@ describe('Beta Registration Schema Validation', () => {
     }
   });
 });
+

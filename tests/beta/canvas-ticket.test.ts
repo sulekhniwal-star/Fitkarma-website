@@ -41,3 +41,4 @@ describe('Canvas Ticket Geometry & Formatting Engine', () => {
     expect(arcCalls[1]).toEqual({ x: 1200, y: 1050, radius: 45 });
   });
 });
+

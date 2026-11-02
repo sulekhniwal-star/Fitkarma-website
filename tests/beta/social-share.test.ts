@@ -24,3 +24,4 @@ describe('Viral Social Sharing Copy Generator', () => {
     expect(text).toBe('मैं FitKarma चरण 2 प्रतीक्षा सूची में स्थान #127 पर हूँ। यहाँ देखें: https://fitkarma.in/hi/beta?ref=seat127');
   });
 });
+

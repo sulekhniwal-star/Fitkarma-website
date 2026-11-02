@@ -73,3 +73,4 @@ describe('Verification Callback Route Handler', () => {
     expect(res.headers.get('location')).toBe('https://fitkarma.in/en/auth/verify?error=invalid_or_expired');
   });
 });
+
