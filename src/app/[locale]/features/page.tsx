@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { InteractiveFeatureShowcase } from '@/components/features/InteractiveFeatureShowcase';
+import { UnifiedFeaturePlayground } from '@/components/features/UnifiedFeaturePlayground';
 import { CompleteFeaturesBento } from '@/components/features/CompleteFeaturesBento';
 import { Sparkles, ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/routing';
@@ -50,8 +50,8 @@ export default async function FeaturesPage({
           </p>
         </div>
 
-        {/* 1. Split-Screen Interactive Feature Showcase with Sticky Left Simulator */}
-        <InteractiveFeatureShowcase />
+        {/* 1. Unified Split-Screen Playground: Left (In-Depth Guides) | Right (Sticky Simulator with Dropdown) */}
+        <UnifiedFeaturePlayground />
 
         {/* 2. Complete Health OS Ecosystem Bento Grid Matrix */}
         <CompleteFeaturesBento />
