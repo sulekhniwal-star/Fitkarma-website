@@ -40,3 +40,4 @@ export const FitKarmaLogo: React.FC<FitKarmaLogoProps> = ({
 };
 
 export default FitKarmaLogo;
+

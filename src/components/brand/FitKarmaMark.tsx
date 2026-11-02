@@ -52,3 +52,4 @@ export const FitKarmaMark: React.FC<FitKarmaMarkProps> = ({
 };
 
 export default FitKarmaMark;
+
