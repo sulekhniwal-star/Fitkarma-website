@@ -77,6 +77,138 @@
         "point4_desc": "Recognizes complex home meals from Dosas and Sambar to Dal Makhani and Biryanis.",
         "interactive_hint": "← Click the shutter button on the 3D phone to your left to simulate real-time AI food recognition."
       }
+    },
+    "ecosystem": {
+      "badge": "Complete Health OS Architecture",
+      "title": "The Full FitKarma Ecosystem Feature Map",
+      "subtitle": "Everything planned and built into India's dedicated Health Operating System — from conversational WhatsApp logging to family health governance.",
+      "filters": {
+        "all": "All Capabilities",
+        "logging": "Zero-Friction Logging",
+        "nutrition": "Indian Culinary Depth",
+        "metabolic": "Metabolic & Health Rails",
+        "family": "Family & Women's Health",
+        "privacy": "Data Sovereignty (DPDP)"
+      },
+      "status_labels": {
+        "p0": "P0 • In Beta Testing",
+        "p1": "P1 • Rolling Out During Beta",
+        "p2": "P2 • Planned in Beta Roadmap"
+      },
+      "items": {
+        "whatsapp_logging": {
+          "title": "WhatsApp Voice & Text Logging",
+          "category": "logging",
+          "status": "p0",
+          "description": "Log meals on WhatsApp where you already live. Send a quick voice note or Hinglish text: '2 roti with dal and a bowl of bhindi'. Our multi-model AI parses portions, calculates nutrition, and logs it seamlessly.",
+          "tag": "Voice & Hinglish AI"
+        },
+        "offline_engine": {
+          "title": "Drift + SQLCipher Offline-First Sync",
+          "category": "logging",
+          "status": "p0",
+          "description": "Never lose access to your health history. Encrypted local SQLite/Drift database functions with zero internet, queuing logs in an offline outbox that auto-syncs when connectivity returns.",
+          "tag": "Zero Connectivity Dependency"
+        },
+        "ai_photo_scanner": {
+          "title": "AI Photo Meal Recognition",
+          "category": "logging",
+          "status": "p1",
+          "description": "Point your camera at home-cooked or restaurant plates. Computer vision segments multiple dishes simultaneously with confidence intervals and transparent user verification.",
+          "tag": "Multi-Dish Vision"
+        },
+        "tadka_slider": {
+          "title": "Tadka / Tempering Fat Slider",
+          "category": "nutrition",
+          "status": "p0",
+          "description": "Select Minimal (1/2 tsp oil), Home-Style (1 tsp ghee), or Festive (2 tbsp ghee) to accurately model Indian cooking oil variations without guessing raw grams.",
+          "tag": "Realistic Indian Cooking"
+        },
+        "family_recipe_splitter": {
+          "title": "Family Recipe Splitter",
+          "category": "nutrition",
+          "status": "p1",
+          "description": "Indian households cook in one large pot. Enter total raw ingredients for the whole family, then log your consumed percentage (e.g., 'I ate 25% of the Sabzi').",
+          "tag": "Household Meal Logic"
+        },
+        "regional_recipes": {
+          "title": "500+ Regional Recipes & Veg Protein",
+          "category": "nutrition",
+          "status": "p0",
+          "description": "Curated database spanning North, South, Bengali, Gujarati, and Maharashtrian cuisines with raw-vs-cooked yield multipliers and plant protein optimization.",
+          "tag": "Pan-India Database"
+        },
+        "festival_fasting": {
+          "title": "Festival & Fasting Mode",
+          "category": "nutrition",
+          "status": "p1",
+          "description": "Adaptive tracking for Navratri, Ramzan, Karwa Chauth, and Ekadashi fasting schedules. Adapts meal windows, hydration reminders, and satvik nutritional guidance.",
+          "tag": "Cultural Fasting Intelligence"
+        },
+        "dynamic_tdee": {
+          "title": "Dynamic & Adaptive TDEE",
+          "category": "metabolic",
+          "status": "p1",
+          "description": "Continuous energy expenditure adjustment based on smoothed weight trends, logged caloric intake, and actual step biometrics, avoiding rigid static BMR calculators.",
+          "tag": "Metabolic Math"
+        },
+        "health_os_sync": {
+          "title": "Google Health Connect & Apple HealthKit",
+          "category": "metabolic",
+          "status": "p0",
+          "description": "Native OS-level bidirectional telemetry sync for steps, sleep stages, resting heart rate, active calories, and workouts across all consumer wearables.",
+          "tag": "OS Biometrics Sync"
+        },
+        "cgm_pipeline": {
+          "title": "Metabolic CGM & Biological Age Pipeline",
+          "category": "metabolic",
+          "status": "p2",
+          "description": "Continuous glucose monitoring integration identifying glycemic spikes and estimating biological metabolic recovery age with exportable clinical dossiers.",
+          "tag": "Continuous Glucose"
+        },
+        "aqi_fitness": {
+          "title": "AQI-Aware Fitness Intelligence",
+          "category": "metabolic",
+          "status": "p1",
+          "description": "Real-time air quality index monitoring suggesting indoor cardio alternatives during high pollution or smog episodes across Tier-1 and Tier-2 Indian cities.",
+          "tag": "Environmental Health"
+        },
+        "family_care_dashboard": {
+          "title": "Family Care Dashboard",
+          "category": "family",
+          "status": "p1",
+          "description": "Health in India is a household responsibility. Consenting adults can monitor elderly parents' daily steps, blood pressure, glucose, and medication adherence with crisis alerts.",
+          "tag": "Parental Telemetry"
+        },
+        "womens_health": {
+          "title": "Women's Health & PCOS Lifestyle Support",
+          "category": "family",
+          "status": "p1",
+          "description": "Menstrual phase tracking, cycle-aware strength training, symptom logging, and insulin-resistant PCOS nutritional guidance protected with elevated privacy controls.",
+          "tag": "Hormonal Rhythm"
+        },
+        "ayurveda_layer": {
+          "title": "Ayurveda Wellness Personalization",
+          "category": "family",
+          "status": "p0",
+          "description": "Cultural wellness customization layer incorporating Dosha considerations, while keeping evidence-based clinical metrics strictly separated from traditional principles.",
+          "tag": "Cultural Wellness"
+        },
+        "data_vault": {
+          "title": "Encrypted Data Vault (DPDP Act 2023)",
+          "category": "privacy",
+          "status": "p0",
+          "description": "SQLCipher client-side encryption and universal PostgreSQL Row-Level Security. Visual breakdown showing data kept strictly on-device vs synced to private cloud.",
+          "tag": "Zero Data Monetization"
+        },
+        "right_to_erasure": {
+          "title": "Cascading 'Erase My Existence' Action",
+          "category": "privacy",
+          "status": "p0",
+          "description": "True right-to-erasure compliance. With a single tap, purge all personal health metrics, logs, and account data with cryptographically verifiable audit receipts.",
+          "tag": "Auditable Deletion"
+        }
+      }
     }
   },
   "hero": {
