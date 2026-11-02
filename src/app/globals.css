@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-canvas: #0D0F12;
+  --color-canvas-subtle: #12161C;
+  --color-canvas-elevated: #181D25;
+  --color-brand-primary: #65C94B;
+  --color-brand-green: #36C96A;
+  --color-brand-gold: #D6A84B;
+  --color-card: #151921;
+  --color-card-border: #232936;
+  --color-ink-primary: #F3F4F6;
+  --color-ink-muted: #9BA3AF;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: rgba(101, 201, 75, 0.3);
+  color: #FFFFFF;
+}
+
+/* Accessible focus outline */
+:focus-visible {
+  outline: 2px solid #65C94B;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
