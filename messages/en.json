@@ -220,6 +220,153 @@
     "exploreButton": "Try Interactive Simulators",
     "remainingSpots": "seats remaining in Phase 1"
   },
+  "home": {
+    "launchDevice": {
+      "bootingBadge": "Live Hardware Reveal",
+      "bootingSubtitle": "Initializing Indian Health Intelligence & Circadian Telemetry...",
+      "greetingsPill": "Circadian Telemetry Active",
+      "tabs": {
+        "dip": "DIP Pulses",
+        "food": "Log Khana",
+        "family": "Family Circle"
+      },
+      "replayButton": "Replay Reveal",
+      "interactiveHint": "Interactive 3D Perspective: Hover or drag to tilt"
+    },
+    "cohortTicker": {
+      "badge": "Phase 1 VIP Allocation",
+      "heading": "{count} VIP Passes Remaining",
+      "subtext": "Every pass is atomically assigned via database FIFO stored procedures. Zero race conditions, zero over-allocation. Phase 2 transitions strictly to waitlist queue.",
+      "allocatedLabel": "{current} / {max} Claimed",
+      "seatsLeft": "Seats Left",
+      "ctaButton": "Claim VIP Pass",
+      "atomicGuarantee": "Atomic PostgreSQL Allocation Guarantee"
+    },
+    "comparison": {
+      "badge": "Built for Indian Reality",
+      "heading": "Why Western Fitness Apps Fail in Indian Households",
+      "subtext": "Most fitness apps assume kitchen scales, avocado toast, and individual dining. FitKarma is engineered from the ground up for the realities of Indian life.",
+      "typicalAppsHeader": "Typical Fitness Trackers",
+      "fitkarmaHeader": "FitKarma Health OS",
+      "rows": {
+        "portions": {
+          "westernTitle": "Requires gram scales for every ingredient",
+          "westernDesc": "Forces users to deconstruct home-cooked subzis and curries into raw grams, causing logging burnout within 5 days.",
+          "fkTitle": "Standardized Katoris & Phulkas with Ghee",
+          "fkDesc": "Logs in authentic 150ml katoris, counts rotis with a single-tap Desi Ghee toggle (+45 kcal), and adjusts tadka oil density."
+        },
+        "logging": {
+          "westernTitle": "Tedious 8-step manual text searches",
+          "westernDesc": "Searching 'dal' yields 400 conflicting community entries with zero portion relevance.",
+          "fkTitle": "1-Tap AI Scanner & WhatsApp Hinglish Voice",
+          "fkDesc": "Send a photo or voice note: 'Do roti aur ek katori dal khai'. Auto-parsed into calibrated macros in under 3 seconds."
+        },
+        "pulses": {
+          "westernTitle": "Nagging calorie deficits & guilt notifications",
+          "westernDesc": "Bombards you with evening deficit warnings without circadian context or metabolic pacing.",
+          "fkTitle": "3 Circadian DIP Pulses (Morning, Midday, Evening)",
+          "fkDesc": "Morning Readiness (07:00), Midday Post-Prandial Nudge (13:30), and Evening Wind-Down Debrief (21:00)."
+        },
+        "family": {
+          "westernTitle": "Isolated single-user accounts",
+          "westernDesc": "Completely ignores shared family cooking, joint kitchen preparation, and parental wellness.",
+          "fkTitle": "Family Recipe Splitter & Parental Care Telemetry",
+          "fkDesc": "Cook for 5, log for 1. Monitor your elderly parents' hydration and steps with non-intrusive consent-governed alerts."
+        },
+        "privacy": {
+          "westernTitle": "Health data sold to advertisers & brokers",
+          "westernDesc": "User health data is monetized for targeted ads, pharmaceutical marketing, and third-party profiling.",
+          "fkTitle": "DPDP Act 2025 Compliant • 1-Click Right to Erasure",
+          "fkDesc": "Indian sovereign data storage, zero health data monetization, and 1-click permanent data wipe via Data Vault."
+        }
+      }
+    },
+    "pillars": {
+      "eyebrow": "The 4 Core Pillars",
+      "heading": "An Operating System for Preventive Longevity",
+      "viewAllFeatures": "Explore All 16 Features",
+      "interactiveSimHint": "Interactive Simulator Available",
+      "nutrition": {
+        "title": "Indian Household Nutrition",
+        "desc": "Katori standardizations, roti ghee toggles, tadka intensity slider, and 4 regional thali baselines.",
+        "status": "In Beta Testing"
+      },
+      "dip": {
+        "title": "Circadian Intelligence (DIP)",
+        "desc": "Daily Intelligence Packages delivered at 07:00, 13:30, and 21:00 aligned with your metabolic rhythms.",
+        "status": "In Beta Testing"
+      },
+      "interfaces": {
+        "title": "Zero-Friction Interfaces",
+        "desc": "Conversational WhatsApp Hinglish logging, offline-first SQLite sync, and 1-tap food scanner.",
+        "status": "In Beta Testing"
+      },
+      "privacy": {
+        "title": "Sovereign Health Rails",
+        "desc": "DPDP Act 2025 compliance, unbundled consent, family care circles, and 1-click Data Vault erasure.",
+        "status": "In Beta Testing"
+      }
+    },
+    "trust": {
+      "dpdp": {
+        "title": "DPDP Act 2025 Compliant",
+        "desc": "Strict data minimization. Your personal health metrics are never sold or shared with advertisers."
+      },
+      "zeroMonetization": {
+        "title": "Zero Data Monetization",
+        "desc": "FitKarma's business model is premium software subscriptions, never monetizing your body's data."
+      },
+      "icmr": {
+        "title": "ICMR-NIN Grounded",
+        "desc": "Nutritional baselines derived from the Indian Council of Medical Research & National Institute of Nutrition."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "Our Mission & Philosophy",
+    "headingPart1": "Reimagining Health for",
+    "headingHighlight": "1.4 Billion People.",
+    "subtext": "FitKarma was founded on a simple observation: modern fitness apps were built for Silicon Valley diets, completely failing the richness and reality of Indian households.",
+    "manifesto": {
+      "title": "The FitKarma Manifesto",
+      "p1": "For decades, Indians trying to improve their health have been trapped in an alienating experience: forced to measure home-cooked dal in grams, calculate rotis like European bread, and endure generic calorie-counting apps that treat our culinary heritage as an obstacle rather than a source of nourishment.",
+      "p2": "We believe true health intelligence must understand Indian biology, Indian kitchens, and Indian family rhythms. It should know what a katori of dal makhani actually contains, celebrate fasting disciplines like Ekadashi, and let you care for your parents' vitals without invading their privacy.",
+      "p3": "FitKarma is not just another calorie tracker. It is India's dedicated Health Operating System — built to empower individuals and families to live longer, vibrant lives."
+    },
+    "pillars": {
+      "sectionTitle": "The 4 Architectural Pillars",
+      "sectionSubtitle": "Engineered from the ground up for the cultural, biological, and privacy realities of India.",
+      "p1": {
+        "title": "Household Nutrition Intelligence",
+        "desc": "Katori standardizations (150ml), Phulka count with Desi Ghee toggle (+45 kcal), and Tadka lipid intensity modeling."
+      },
+      "p2": {
+        "title": "Circadian Intelligence (DIP)",
+        "desc": "3 contextual daily pulses (07:00 Morning Readiness, 13:30 Midday Nudge, 21:00 Evening Debrief) replacing nagging calorie alarms."
+      },
+      "p3": {
+        "title": "Zero-Friction Interfaces",
+        "desc": "Natural Hinglish voice logging on WhatsApp, 1-tap plate scanning, and encrypted offline-first SQLite sync."
+      },
+      "p4": {
+        "title": "Sovereign Health Rails",
+        "desc": "Strict DPDP Act 2025 compliance, unbundled affirmative consent, family care telemetry, and 1-click Data Vault erasure."
+      }
+    },
+    "standards": {
+      "badge": "Ethical AI & Clinical Boundaries",
+      "title": "Evidence-Based, Culturally Grounded, Strictly Preventive",
+      "desc": "FitKarma operates with unwavering scientific integrity. We separate lifestyle awareness from medical diagnosis, ensuring safe, transparent guidance.",
+      "point1": "Grounded in ICMR-NIN dietary guidelines for Indians.",
+      "point2": "Zero diagnostic or curative promises; complements certified healthcare.",
+      "point3": "No medical data monetization or advertiser profiling.",
+      "point4": "Clear distinction between clinical metrics and traditional wellness."
+    },
+    "cta": {
+      "title": "Shape the Future of Indian Wellness",
+      "subtitle": "Phase 1 VIP Beta is limited to 1,000 founding members with lifetime community privileges."
+    }
+  },
   "footer": {
     "copyright": "© 2026 FitKarma Technologies. All rights reserved.",
     "privacy": "Privacy Notice (DPDP)",
@@ -417,6 +564,151 @@
         "raita": "Cucumber Onion Raita (1 Katori)"
       },
       "disclaimer": "Simulated UI: Illustrative of FitKarma mobile AI recognition engine trained on 2,500+ Indian dishes."
+    }
+  },
+  "faq": {
+    "eyebrow": "Frequently Asked Questions",
+    "headingPart1": "Everything You Need to Know About",
+    "headingHighlight": "FitKarma & VIP Beta.",
+    "subtext": "Clear, transparent answers about our 1,000-seat Phase 1 quota, Indian nutrition AI, WhatsApp logging, and privacy safeguards.",
+    "searchPlaceholder": "Search questions (e.g. katori, WhatsApp, waitlist, privacy)...",
+    "categories": {
+      "all": "All Questions",
+      "cohort": "VIP Beta Cohort",
+      "nutrition": "Indian Nutrition AI",
+      "interfaces": "Interfaces & Logging",
+      "privacy": "Privacy & DPDP Act"
+    },
+    "empty": {
+      "title": "No questions found matching your search",
+      "subtitle": "Try searching for a different keyword or browse all categories.",
+      "reset": "Reset Search & Filters"
+    },
+    "supportCard": {
+      "title": "Have a specific question not covered here?",
+      "desc": "Our engineering and nutrition research team reads every inquiry. Join the VIP beta to participate in our direct community discussions."
+    },
+    "items": {
+      "cohort_allocation": {
+        "q": "How does the 1,000-seat Phase 1 cap work?",
+        "a": "Phase 1 is strictly capped at exactly 1,000 accepted registrations. Every time a user verifies their email, our database executes an atomic row-level FIFO transaction (allocate_beta_seat) that decrements remaining capacity. Once 1,000 seats are assigned, subsequent verified users automatically transition to Phase 2 waitlist with dynamic queue numbers."
+      },
+      "waitlist_transition": {
+        "q": "What happens if someone withdraws from Phase 1?",
+        "a": "Our database trigger immediately auto-promotes the earliest verified applicant on the Phase 2 waitlist into Phase 1, dispatching an invitation email with their assigned VIP pass seat badge."
+      },
+      "katori_roti_science": {
+        "q": "How does FitKarma calculate nutrition for Indian home cooking?",
+        "a": "Unlike Western trackers that demand gram kitchen scales, FitKarma uses standardized Indian household measurements: 150ml standard katoris for dal/subzi, phulka/roti counts with a single-tap Desi Ghee toggle (+45 kcal lipid adjustment), and an authentic tadka slider (minimal home oil, standard tempering, or rich festive preparations)."
+      },
+      "regional_thalis": {
+        "q": "Does FitKarma support different regional Indian diets?",
+        "a": "Yes. FitKarma includes calibrated baselines for North Indian (wheat/dal/curd), South Indian (rice/sambar/rasam), Bengali (machh/bhaat/shukto), and Western Indian (Gujarati/Maharashtrian kadhi/bhakri) culinary profiles, derived from ICMR-NIN dietary research."
+      },
+      "whatsapp_logging": {
+        "q": "How does conversational WhatsApp food logging work?",
+        "a": "You can send a natural voice note or Hinglish text (e.g. '2 roti with yellow dal and a bowl of bhindi') to the official FitKarma WhatsApp bot. Our multi-modal AI extracts dishes, portions, and cooking styles, and logs it directly to your Daily Karma record in seconds."
+      },
+      "offline_sync": {
+        "q": "Can I use FitKarma without an active internet connection?",
+        "a": "Yes. FitKarma's mobile client is built offline-first using SQLCipher on-device storage. You can log meals, check daily macros, and view historical metrics completely offline. Logs queue in a local outbox and sync securely whenever connectivity is restored."
+      },
+      "dpdp_protection": {
+        "q": "How does FitKarma comply with India's DPDP Act 2023?",
+        "a": "We adhere strictly to India's Digital Personal Data Protection Act 2023: data minimization (no phone numbers or sensitive medical metrics on public forms), sovereign hosting in Indian data centers, explicit unbundled consent, and zero health data monetization."
+      },
+      "erase_existence": {
+        "q": "Can I permanently delete all my health data?",
+        "a": "Yes. Under Section 12 of the DPDP Act, you have the right to permanent erasure. In your FitKarma Data Vault, a single tap triggers a cascading hard delete across all databases, generating a cryptographic audit receipt of complete deletion."
+      }
+    }
+  },
+  "privacy": {
+    "badge": "DPDP Act 2023 Compliant",
+    "title": "Privacy Notice & Data Protection",
+    "subtitle": "We believe your health data is sovereign. FitKarma is built on data minimization, explicit consent, and zero data selling.",
+    "lastUpdated": "Effective Date: January 1, 2026 | Version 1.0 (DPDP 2023 Compliant)",
+    "summary": {
+      "title": "Our 4 Non-Negotiable Privacy Commitments",
+      "point1": "Zero commercial sale or sharing of health metrics with advertisers or insurance brokers.",
+      "point2": "Strict data minimization: we only collect what is strictly necessary for your VIP beta access.",
+      "point3": "Hosted locally in secure Indian cloud data centers with AES-256 encryption.",
+      "point4": "1-Click Right to Erasure: purge all your records instantly with cryptographic receipt."
+    },
+    "s1": {
+      "title": "Data Fiduciary & Governance",
+      "p1": "FitKarma Health Technologies Private Limited ('FitKarma', 'we', 'our') operates as a Data Fiduciary under India's Digital Personal Data Protection (DPDP) Act, 2023. This Privacy Notice governs the collection, processing, and protection of personal data provided through our pre-launch website and VIP beta ecosystem."
+    },
+    "s2": {
+      "title": "Personal Data We Collect (Data Minimization)",
+      "p1": "In strict compliance with the data minimization principle, our public pre-launch forms collect only:",
+      "item1": "Identity & Contact: Full Name and Email Address (for VIP Beta pass issuance and double opt-in verification).",
+      "item2": "Device Platform: iOS or Android (to coordinate client test flight builds).",
+      "item3": "Wellness Interests: High-level health goals and feature priorities (to optimize beta onboarding).",
+      "item4": "Technical Telemetry: IP address and browser headers (solely for rate limiting and bot mitigation).",
+      "minimizationNote": "Important: We do NOT collect phone numbers, government IDs, physical addresses, or sensitive biometric/clinical medical records on any public pre-launch forms."
+    },
+    "s3": {
+      "title": "Specified Lawful Purposes",
+      "p1": "Your personal data is processed solely for:",
+      "item1": "Authenticating your identity and allocating a verifiable VIP Beta Pass seat badge.",
+      "item2": "Transmitting transactional emails regarding your cohort status, waitlist position, or app access.",
+      "item3": "Evaluating aggregated technical telemetry to prevent automated bot signups."
+    },
+    "s4": {
+      "title": "Consent & Unbundled Preferences",
+      "p1": "Participation in our VIP Beta requires affirmative, unbundled consent. We never pre-tick marketing checkboxes or bundle commercial communications with core service agreements. You may withdraw your consent at any time."
+    },
+    "s5": {
+      "title": "Your Rights as a Data Principal",
+      "p1": "Under Sections 11 to 14 of the DPDP Act 2023, you hold enforceable rights:",
+      "right1_title": "Right to Access (Sec. 11)",
+      "right1_desc": "Request a summary of your personal data processed by FitKarma and third-party identities with whom data was shared.",
+      "right2_title": "Right to Correction & Erasure (Sec. 12)",
+      "right2_desc": "Correct inaccurate details or trigger permanent hard-deletion of your account and health records.",
+      "right3_title": "Right of Grievance Redressal (Sec. 13)",
+      "right3_desc": "File an inquiry or grievance with our designated Data Protection Officer with guaranteed 48-hour response.",
+      "right4_title": "Right to Nominate (Sec. 14)",
+      "right4_desc": "Nominate an individual to exercise data principal rights in the event of death or incapacity."
+    },
+    "s6": {
+      "title": "Data Protection Officer & Grievance Redressal",
+      "p1": "If you have questions, require data access, or wish to exercise your rights under the DPDP Act 2023, contact our Data Protection Officer:"
+    }
+  },
+  "terms": {
+    "badge": "Beta Participation Agreement",
+    "title": "VIP Beta Terms of Service",
+    "subtitle": "Transparent terms governing your participation in the FitKarma 1,000-seat VIP Beta programme.",
+    "lastUpdated": "Effective Date: January 1, 2026 | Version 1.0",
+    "disclaimer": {
+      "title": "Important Medical & Non-Diagnostic Disclaimer",
+      "text": "FitKarma is a wellness, nutritional intelligence, and lifestyle awareness platform. FitKarma is NOT a medical device, licensed medical provider, or clinical diagnostic laboratory. Content, daily intelligence pulses, macro estimates, and insights provided by FitKarma are for informational and educational purposes only and do not constitute medical advice, clinical diagnosis, prevention, or treatment of any disease. Always consult a certified physician or licensed healthcare provider regarding medical conditions or health decisions."
+    },
+    "s1": {
+      "title": "Scope of Beta Testing",
+      "p1": "The FitKarma platform is currently undergoing active beta evaluation. Features, user interfaces, algorithms, and simulators may evolve rapidly based on user feedback. Phase 1 VIP Beta access is free of charge and invite-only."
+    },
+    "s2": {
+      "title": "1,000-Seat FIFO Quota & Allocation",
+      "p1": "VIP Beta passes are allocated strictly in order of verified application timestamp (First-In, First-Out) up to exactly 1,000 spots. Allocation is executed atomically via database stored procedures.",
+      "p2": "Subsequent applications are automatically placed in the Phase 2 waitlist queue and may be promoted if an accepted applicant relinquishes their seat."
+    },
+    "s3": {
+      "title": "User Conduct & Acceptable Use",
+      "p1": "You agree not to attempt to reverse engineer, scrape, bypass rate limiting, submit automated bot registrations, or compromise the platform's security infrastructure."
+    },
+    "s4": {
+      "title": "Feedback & Intellectual Property",
+      "p1": "All feedback, bug reports, and suggestions submitted during beta testing may be used by FitKarma to improve the ecosystem without obligation of compensation or attribution."
+    },
+    "s5": {
+      "title": "Termination & Account Deletion",
+      "p1": "You may terminate your participation at any time and request permanent deletion of your data via our DPDP-compliant Data Vault mechanism."
+    },
+    "s6": {
+      "title": "Governing Law & Jurisdiction",
+      "p1": "These Beta Terms shall be governed by and construed in accordance with the laws of the Republic of India. Any disputes arising hereunder shall be subject to the exclusive jurisdiction of the competent courts in New Delhi, India."
     }
   }
 }
