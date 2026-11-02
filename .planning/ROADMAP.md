@@ -32,7 +32,7 @@ This roadmap organizes the development of the FitKarma pre-launch marketing site
 - **Requirements Covered:** `LAND-01`, `LAND-02`, `LAND-08`, `A11Y-01`, `A11Y-02`, `A11Y-03`.
 - **Dependencies:** Phase 1 (Completed).
 - **Verification:** Interactive UI components render cleanly on dark background, pass WCAG AA contrast (4.5:1), and keyboard focus rings are visible.
-- **Status:** Planned (3 plans across 3 waves)
+- **Status:** Complete (Verified in 02-VERIFICATION.md)
 
 ---
 
@@ -52,9 +52,9 @@ This roadmap organizes the development of the FitKarma pre-launch marketing site
   - **FAQ Accordion**: 6 key questions regarding beta selection, safety, devices, and rollout.
   - **SEO & Metadata**: Title, description, OpenGraph tags, canonicals, `robots.txt`, and `sitemap.ts`.
 - **Requirements Covered:** `LAND-02`, `LAND-03`, `LAND-04`, `LAND-05`, `LAND-06`, `LAND-07`, `LAND-08`, `I18N-03`, `PERF-01`, `PERF-02`.
-- **Dependencies:** Phase 2.
+- **Dependencies:** Phase 2 (Completed).
 - **Verification:** Complete landing page renders in English and Hindi without missing translations; Lighthouse score > 90 across Performance, SEO, and Accessibility.
-- **Status:** Pending
+- **Status:** Ready to Plan
 
 ---
 

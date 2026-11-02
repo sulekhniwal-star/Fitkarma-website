@@ -13,6 +13,7 @@
   --color-card-border: #232936;
   --color-ink-primary: #F3F4F6;
   --color-ink-muted: #9BA3AF;
+  --color-ink-subtle: #6B7280;
 }
 
 body {
@@ -34,12 +35,40 @@ body {
   outline-offset: 2px;
 }
 
+/* 3D perspective and glass utility classes */
+.perspective-container {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.glass-card {
+  background: rgba(21, 25, 33, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-elevated {
+  background: rgba(24, 29, 37, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.rim-light-green {
+  box-shadow: inset 0 1px 1px 0 rgba(101, 201, 75, 0.3), 0 0 25px -5px rgba(101, 201, 75, 0.25);
+}
+
+.rim-light-gold {
+  box-shadow: inset 0 1px 1px 0 rgba(214, 168, 75, 0.35), 0 0 25px -5px rgba(214, 168, 75, 0.25);
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+    transform: none !important;
   }
 }
-
