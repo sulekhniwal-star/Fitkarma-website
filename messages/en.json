@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "title": "FitKarma — India's AI-powered Fitness and Wellness Ecosystem",
+    "description": "FitKarma is India's dedicated AI health intelligence platform, featuring culturally attuned nutrition logging, Daily Intelligence Packages, and a capped 1,000-seat VIP Beta cohort.",
+    "keywords": "FitKarma, Indian fitness, AI health intelligence, Indian meal tracker, roti katori calories, wellness ecosystem"
+  },
+  "common": {
+    "brandName": "FitKarma",
+    "tagline": "India's AI-powered Fitness and Wellness Ecosystem",
+    "primaryCta": "Reserve VIP Beta Pass",
+    "secondaryCta": "Explore Features",
+    "language": "Language",
+    "exclusiveCohort": "Phase 1: Strictly 1,000 VIP Beta Seats"
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "about": "Our Mission",
+    "beta": "VIP Beta Pass",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "eyebrow": "Exclusive VIP Beta Access",
+    "headingPart1": "Health intelligence built for",
+    "headingHighlight": "Indian lifestyles.",
+    "description": "From accurate roti and katori portion tracking to contextual morning-to-night health nudges. Experience India's first metabolic intelligence ecosystem built from the ground up for our food, biology, and habits.",
+    "ctaButton": "Claim Your VIP Beta Spot",
+    "exploreButton": "Try Interactive Simulators",
+    "remainingSpots": "seats remaining in Phase 1"
+  },
+  "footer": {
+    "copyright": "© 2026 FitKarma Technologies. All rights reserved.",
+    "privacy": "Privacy Notice (DPDP)",
+    "terms": "Beta Terms",
+    "tagline": "Designed with precision for India."
+  }
+}

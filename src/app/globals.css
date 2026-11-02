@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #0d0f12;
+  --color-surface: #14181d;
+  --color-brand-green: #36c96a;
+  --color-brand-glow: #65c94b;
+  --color-brand-gold: #d6a84b;
+  --color-brand-border: rgba(255, 255, 255, 0.08);
+  --color-brand-muted: #94a3b8;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-hindi: "Noto Sans Devanagari", "Mangal", "Lohit Devanagari", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+:root {
+  --background: #0d0f12;
+  --foreground: #f8fafc;
+  --primary: #36c96a;
+  --primary-glow: #65c94b;
+  --accent-gold: #d6a84b;
+  --card: #14181d;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --muted: #94a3b8;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(20, 24, 29, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
