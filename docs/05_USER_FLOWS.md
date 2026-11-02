@@ -2,19 +2,25 @@
 
 ## 1. Beta application journey
 
-1. Visitor chooses English or Hindi.
-2. Visitor reads what FitKarma is, the beta programme explanation and privacy information.
-3. Visitor clicks “Join beta”.
-4. Form asks for name, email, one primary feature priority, and optional device/language fields.
-5. Visitor accepts the displayed beta terms and privacy notice; optional promotional consent is separate and off by default.
-6. Server validates input, rate-limits, checks bot controls and creates a pending verification record. This does not consume a seat.
-7. System sends a one-time email verification link/code.
-8. User verifies email.
-9. Trusted server/database transaction checks current phase status and available capacity.
-10. If Phase 1 is open and has fewer than 1,000 accepted entries, allocate the next sequential Phase 1 seat.
-11. Otherwise create a Phase 2 waitlist entry.
-12. Send exactly one appropriate confirmation email.
-13. Provide a safe status link or confirmation page without exposing other applicants.
+1. Visitor navigates to `/beta` (or clicks the floating navbar "Join Beta" CTA from any page).
+2. Page displays the live Phase 1 status bar (e.g. `482 / 1,000 Verified Seats Claimed`) with real-time updates.
+3. Form collects:
+   - Full Name
+   - Email address
+   - Primary Health Goals (multi-select: *Weight Loss & Metabolism*, *Lean Muscle & Strength*, *Gut Health & Digestion*, *Daily Energy & Stamina*, *Sustained Habit Consistency*)
+   - Device Platform (*iOS*, *Android*, *Both*)
+   - Features Needed Most from Feature Inventory (multi-select: *Indian Nutrition & Household Portions*, *Daily Intelligence Package (DIP)*, *AI Photo Food Logging*, *WhatsApp Text & Voice Logging*, *Connected Health Sync*, *Family-Aware Wellness*) + optional custom "Other" text input.
+4. Visitor acknowledges beta terms and privacy notice (un-ticked promotional consent separate).
+5. Server validates inputs, checks honeypot/rate-limits, and inserts pending verification record.
+6. System sends a one-time transactional verification code / magic link via Resend.
+7. User enters the OTP or clicks the magic link (`/auth/verify`).
+8. PostgreSQL atomic transaction executes `allocate_beta_seat(user_id)`:
+   - If Phase 1 has `< 1,000` accepted seats, atomically assigns the next sequential seat number (`#0001` to `#1000`) with status `phase1_accepted`.
+   - If Phase 1 is full (`>= 1,000`), assigns status `phase2_waitlist` with queue number.
+9. **VIP Beta Pass Generation:** User is redirected to `/auth/verify` which renders their dynamic, holographic **VIP Beta Pass**:
+   - Displays applicant name, allocated seat badge (e.g., `VIP SEAT #0042`), and issue date.
+   - Provides a 1-click **Download Pass (PNG)** button and **Share to WhatsApp** & **Share to X** buttons with pre-filled text.
+10. System sends the official confirmation email via Resend containing a digital copy of their pass.
 
 ## 2. First-come, first-served rule
 

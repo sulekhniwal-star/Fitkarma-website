@@ -16,17 +16,24 @@
 - Keep FitKarma and common technical brand terms consistent; explain AI/health terminology in simple language.
 - Avoid mistranslating terms that might imply clinical diagnosis or guaranteed results.
 
-## 3. SEO basics
+## 3. SEO, Metadata & Multi-Page Routes
 
-- Unique title and meta description for each locale.
-- Correct canonical and `hreflang` annotations for English/Hindi equivalents.
-- XML sitemap includes only public indexable pages.
-- `noindex` authentication callbacks, status pages, admin and internal preview routes.
-- Open Graph/Twitter card assets after logo and OG design approval.
-- Semantic HTML, fast loading and stable layout.
-- Structured data only where accurate and eligible; do not fabricate product ratings, organisation addresses, reviews or offers.
-- Use descriptive image alt text and modern responsive image formats.
-- Avoid duplicate content between language pages; translate properly.
+Every public route includes localized metadata, Open Graph cards, Twitter cards, and `hreflang` alternates:
+
+| Route | English Title (`<title>`) | English Meta Description |
+|---|---|---|
+| `/` | FitKarma — India's AI-powered Fitness and Wellness Ecosystem | India's AI-first fitness ecosystem built for regional nutrition, household portions, and daily health intelligence. |
+| `/features` | Features — FitKarma \| Built for Indian Nutrition & Everyday Health | Explore FitKarma's 6 core pillars: Indian Nutrition Engine, Daily Intelligence Package, AI Photo Logging, and more. |
+| `/about` | About FitKarma \| Why India Needs a Dedicated Health Ecosystem | Learn why Western fitness trackers fail in Indian households and how FitKarma is building a modern, India-first alternative. |
+| `/beta` | Join Beta \| FitKarma — Reserve Your Phase 1 Access Spot | Apply for the FitKarma Phase 1 beta. Limited to 1,000 verified places. Reserve your VIP Beta Pass today. |
+| `/faq` | Frequently Asked Questions — FitKarma Beta & Tracking | Common questions regarding beta rollout, Indian food tracking accuracy, device connectivity, and data privacy. |
+| `/privacy` | Privacy Notice — FitKarma \| DPDP 2025 Aligned | Learn how FitKarma respects your privacy, handles consent, and protects personal data. |
+| `/terms` | Beta Programme Terms — FitKarma | Terms and conditions governing participation in the progressive FitKarma beta programme. |
+
+### Dynamic Open Graph & Social Cards
+- Implemented via Next.js `ImageResponse` (`@vercel/og`) in `app/opengraph-image.tsx`.
+- Renders the approved obsidian background (`#0D0F12`), glowing emerald/amber aura, official FitKarma logo lockup, and page-specific dynamic headlines.
+- `noindex, nofollow` strictly applied to `/auth/verify`, `/admin/*`, and internal preview routes.
 
 ## 4. Keyword/content themes
 

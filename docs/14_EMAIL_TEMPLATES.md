@@ -32,31 +32,45 @@ FitKarma बीटा कार्यक्रम में आवेदन क�
 
 ## 3. Phase 1 accepted — English
 
-**Subject:** You're in — FitKarma Phase 1 beta
+**Subject:** You're in! Your FitKarma Phase 1 VIP Beta Pass (#{{seat_number}})
 
 Hi {{first_name}},
 
-Your email has been verified and your application has secured a place in FitKarma Phase 1 beta.
+Congratulations — your email has been verified and you have secured an official place in the FitKarma Phase 1 beta.
 
-Your reference: {{application_reference}}
+**Your Reserved Seat:** `VIP SEAT #{{seat_number}}` (out of 1,000)  
+**Reference ID:** `{{application_reference}}`
 
-We'll email you with the next steps when your beta access is ready. FitKarma capabilities will be introduced and improved in stages during the beta programme.
+### Your VIP Beta Pass Card
+You can view, download, and share your digital pass card anytime here:  
+**[View My VIP Beta Pass]({{pass_url}})**
 
-Thanks for helping shape FitKarma.
+We will notify you by email as soon as beta access opens. FitKarma features will roll out progressively to Phase 1 participants.
+
+Thank you for being part of the first 1,000 shaping India's AI-powered wellness ecosystem.
 
 — Team FitKarma
 
 ## 4. Phase 1 accepted — Hindi
 
-**विषय:** आपका स्वागत है — FitKarma Phase 1 बीटा
+**विषय:** बधाई हो! आपका FitKarma Phase 1 VIP बीटा पास (#{{seat_number}})
 
 नमस्ते {{first_name}},
 
-आपका ईमेल सत्यापित हो गया है और FitKarma Phase 1 बीटा में आपका स्थान पक्का हो गया है।
+बधाई हो — आपका ईमेल सत्यापित हो चुका है और FitKarma Phase 1 बीटा में आपका स्थान सुरक्षित हो गया है।
 
-आपका संदर्भ नंबर: {{application_reference}}
+**आपका आरक्षित स्थान:** `VIP SEAT #{{seat_number}}` (कुल 1,000 में से)  
+**संदर्भ संख्या:** `{{application_reference}}`
 
-बीटा एक्सेस शुरू होने और अगले चरणों की जानकारी हम आपको ईमेल से भेजेंगे। बीटा कार्यक्रम के दौरान FitKarma की सुविधाएँ चरणों में शुरू और बेहतर की जाएँगी।
+### आपका डिजिटल VIP बीटा पास
+आप अपना डिजिटल पास कार्ड यहाँ देख, डाउनलोड और शेयर कर सकते हैं:  
+**[मेरा VIP बीटा पास देखें]({{pass_url}})**
+
+बीटा एक्सेस शुरू होने पर हम आपको ईमेल द्वारा सूचित करेंगे। Phase 1 सदस्यों के लिए सुविधाएँ चरणबद्ध तरीके से जारी की जाएँगी।
+
+भारत के पहले AI-संचालित वेलनेस इकोसिस्टम का हिस्सा बनने के लिए धन्यवाद।
+
+— FitKarma टीम
 
 FitKarma को बेहतर बनाने में मदद करने के लिए धन्यवाद।
 

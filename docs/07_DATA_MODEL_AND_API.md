@@ -24,22 +24,22 @@ Guardrail: Phase 1 capacity must not exceed 1,000. Owner may increase future-pha
 - `email` original display form
 - `normalized_email` text with unique constraint (case-folded/trimmed)
 - `email_verified_at` nullable timestamp
-- `status` enum from `02_REQUIREMENTS_AND_SCOPE.md`
+- `status` enum (`pending_verification`, `phase1_accepted`, `phase2_waitlist`, `withdrawn`)
 - `phase_id` nullable FK
-- `seat_number` nullable integer; unique with phase ID where allocated
-- `primary_feature_interest` controlled enum/string from approved list
-- `other_feature_interest_text` nullable short text
-- `device_platform` nullable enum
+- `seat_number` nullable integer; unique with phase ID where allocated (1 to 1000 for Phase 1)
+- `health_goals` text[] (array of selected goals: `weight_loss`, `muscle_gain`, `gut_health`, `energy`, `habit_consistency`)
+- `feature_priorities` text[] (array of selected features from inventory: `indian_nutrition`, `dip_intelligence`, `photo_logging`, `voice_logging`, `health_sync`, `family_wellness`)
+- `other_feature_text` nullable short text
+- `device_platform` text enum (`ios`, `android`, `both`)
 - `preferred_language` nullable enum (`en`, `hi`)
 - `privacy_notice_version`, `privacy_accepted_at`
 - `beta_terms_version`, `terms_accepted_at`
 - `marketing_consent` boolean default false; `marketing_consent_at` nullable
 - `application_created_at` (server timestamp), `verification_sent_at`, `email_verified_at`, `decision_at`
-- `allocation_order_at` (server timestamp; populate according to owner-approved FIFO rule O-013)
-- `source_campaign`/UTM fields only if approved and privacy-reviewed; do not capture arbitrary URL PII
+- `allocation_order_at` (server timestamp populated upon email verification)
 - `withdrawn_at` nullable
 
-Do not store medical or health information in this table.
+Do not store clinical medical records or diagnoses in this table.
 
 ### `email_outbox`
 

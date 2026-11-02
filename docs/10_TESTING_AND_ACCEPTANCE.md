@@ -12,19 +12,28 @@
 - Documentation and decision register updated.
 - Report tests run, tests skipped, issues and owner dependencies honestly.
 
-## 2. Marketing website tests
+## 2. Marketing website & interactive tests
 
-- Correct brand name and primary positioning.
-- All primary navigation and CTAs work.
-- English/Hindi switch preserves page intent.
-- No dead links or placeholder text in production pages.
-- Feature labels match the centrally approved feature status.
-- Illustrative screens are labelled accurately.
-- Responsive layout at small/mobile/tablet/desktop sizes.
-- Reduced-motion mode works.
-- Keyboard-only navigation and screen-reader labels are usable.
-- Contrast and focus indicators meet the agreed WCAG 2.2 AA target as far as tested.
-- SEO metadata, canonical, `hreflang`, sitemap and robots directives are correct.
+- Correct brand name (`FitKarma`) and approved positioning everywhere.
+- All multi-page routes (`/`, `/features`, `/about`, `/beta`, `/faq`, `/privacy`, `/terms`) render without 404 or hydration mismatches.
+- English/Hindi switch preserves current route and intent.
+- **3D Karma Ring & WebGL Fallback:**
+  - Renders 60 FPS on WebGL-enabled desktop and modern mobile devices.
+  - Automatically reduces particle count or falls back to an animated CSS gradient mesh when WebGL is unsupported, disabled, or in low-power mode.
+  - No uncaught WebGL context errors in browser console.
+- **UI Sound Design (SFX):**
+  - Mute/Unmute state toggles immediately and persists in `localStorage`.
+  - Zero sound playback on initial page load without explicit user gesture/interaction.
+- **Interactive Simulators (`/features`):**
+  - Indian Meal Sandbox dynamically updates calories and macros as roti and katori sliders change.
+  - Daily Intelligence Package preview cards toggle context correctly.
+- **VIP Beta Pass Card:**
+  - Accurately displays user's allocated seat number (`VIP SEAT #xxxx`).
+  - PNG export produces a sharp image without clipped borders or missing typography.
+  - WhatsApp and X share links generate clean URL parameters without leaking PII.
+- Reduced-motion mode (`prefers-reduced-motion`) halts 3D camera sweeps and GSAP pinned sequences.
+- Keyboard-only navigation and focus rings meet WCAG 2.2 AA target.
+- Metadata, Open Graph images, canonical URLs, and `hreflang` tags verified.
 
 ## 3. Registration functional tests
 

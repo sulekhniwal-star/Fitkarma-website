@@ -28,13 +28,27 @@ The site is designed to feel like a world-class technology launch—punchy, slee
 ## 3. Motion, 3D, and Interactive Graphics Stack
 
 - **Smooth Momentum Scrolling:** Powered by **Lenis** (`lenis`) for buttery smooth viewport scrolling across all routes.
-- **3D & WebGL Canvas Background:** Built with **React Three Fiber (R3F)**, **@react-three/drei**, and **postprocessing**. Renders an ambient, dynamic energy grid / particle field that gently reacts to pointer/cursor movements and scroll velocity.
-- **Micro-Interactions & UI Transitions:** Powered by **Motion** (`framer-motion` / `motion`) for layout transitions, stagger entrances, interactive bento card tilt, magnetic buttons, and glowing border highlights.
+- **3D Floating 'Karma Ring' (WebGL Canvas):** Built with **React Three Fiber (R3F)**, **@react-three/drei**, and **postprocessing**.
+  - A luminous, futuristic particle torus and biometric pulse core that rotates and subtly distorts with cursor physics and scroll velocity.
+  - Ambient particle constellation in the background reflecting metabolic vitality.
+  - Dynamic GPU/FPS detection: scales down particle count on mid-tier phones and gracefully falls back to an ultra-lightweight animated CSS glowing gradient mesh on low-end or low-power devices.
+  - Persistent canvas: stays mounted across page transitions (`/`, `/features`, `/about`, `/beta`), smoothly morphing camera position and rotation without tearing.
+- **Floating Dynamic Glass Pill Navigation:**
+  - Centered floating pill navbar with `backdrop-filter: blur(16px)`, `rgba(20, 23, 28, 0.75)` dark frosted fill, and subtle glowing border.
+  - Contains: Logo mark lockup, route navigation links (`Features`, `About`, `Beta`, `FAQ`), subtle UI Sound toggle button, instant English/Hindi switcher, and glowing "Join Beta" CTA button.
+  - Shrinks smoothly on scroll down and expands on scroll up.
+- **Subtle UI Sound Design (SFX):**
+  - Optional futuristic audio interactions designed using Web Audio API / lightweight audio samples (under 10KB): soft hover blip (1200Hz sine), micro click (800Hz snap), and a resonant harmonic chime on verification success.
+  - Sound state persisted in `localStorage` with a visible audio mute toggle in the floating glass navbar.
+- **Micro-Interactions & UI Transitions:** Powered by **Motion** (`framer-motion`) for layout transitions, stagger entrances, interactive bento card tilt, magnetic buttons, and glowing border highlights.
 - **Scroll Choreography:** **GSAP + ScrollTrigger** for pinned multi-step product walkthroughs, split-text headline reveals, and horizontal card sequences.
 - **Interactive Product Mockups:**
-  - Interactive Indian Food Logger widget (slider for roti count, katori portion selector, tadka oil slider).
-  - Live Daily Intelligence Package (DIP) simulator showcasing personalized daily health insights.
-  - Interactive AI Photo Food Scanner simulator with confidence indicators.
+  - **Interactive Indian Meal Sandbox (`/features`):** Clickable regional thalis (North Indian, South Indian, Bengali, Maharashtrian) with real-time sliders for roti count, katori volume portions, and tadka oil/ghee estimator with live macro/calorie calculations.
+  - **Live Daily Intelligence Package (DIP) Simulator:** Interactive cards displaying personalized health insights, readiness score, and actionable next steps.
+  - **Interactive AI Photo Food Scanner Simulator:** Interactive widget with confidence indicators and ingredient extraction.
+- **VIP Beta Pass Card (Post-Registration Asset):**
+  - Holographic dark glass card with metallic emerald borders, unique reserved seat badge (e.g. `#0042`), applicant name, and dynamic issue timestamp.
+  - One-click high-resolution PNG download (`html-to-image` / Canvas export) and instant share to WhatsApp & X with customized share copy ("I just reserved seat #42 in the FitKarma Beta...").
 
 ## 4. Typography
 

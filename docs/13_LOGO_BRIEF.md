@@ -1,50 +1,40 @@
-# 13 — FitKarma Logo and Brand Identity Brief
+# 13 — Approved Brand Identity and Asset System
 
-## Status
+## 1. Status
 
-No official logo exists yet. The owner intends to develop it with AI. This brief guides visual exploration; it does not approve a final mark.
+**APPROVED & INTEGRATED:** The official FitKarma vector brand identity suite is complete and stored in [`FitKarma-Logo/`](file:///f:/Fitkarma-website/FitKarma-Logo).
 
-## Brand identity
+## 2. Core Identity & Color Tokens
 
-- Brand: **FitKarma**
-- Positioning: **India's AI-powered Fitness and Wellness Ecosystem**
-- Character: intelligent, grounded, optimistic, premium, India-first, human, future-facing.
-- Visual direction: hybrid futuristic + cinematic product launch.
-- Existing base direction from app master: dark canvas `#0D0F12`.
-- Accent colour: proposed, not yet approved; explore a restrained electric-lime/emerald family and a secondary teal option.
+- **Brand:** `FitKarma` (exact capitalization)
+- **Primary Positioning:** `India's AI-powered Fitness and Wellness Ecosystem`
+- **Visual Character:** Intelligent, grounded, premium, India-first, future-facing motion aesthetic.
+- **Color Tokens:**
+  - Deep Dark Canvas: `#0D0F12`
+  - Emerald Green: `#36C96A` / `#16A34A`
+  - Vibrant Karma Glow Accent: `#65C94B` / `#A3E635`
+  - Premium Gold (Turmeric/Ayurveda Accent): `#D6A84B`
+  - Light Surface: `#F8FAFC`
 
-## Logo system required
+## 3. Approved Asset Inventory (`FitKarma-Logo/`)
 
-1. Primary horizontal wordmark: FitKarma.
-2. Standalone app/website symbol.
-3. Compact favicon/avatar form.
-4. Light-on-dark and dark-on-light variants.
-5. Monochrome variant.
-6. Clear-space and minimum-size guidance.
+The repository contains scalable vector (SVG) and raster (PNG) assets ready for web, mobile, and social cards:
 
-## Concept territory
+| File | Type | Description / Usage |
+|---|---|---|
+| `svg/fitkarma-primary-dark.svg` | SVG | Horizontal logo with positioning line for dark backgrounds (navbar / footer). |
+| `svg/fitkarma-primary-light.svg` | SVG | Horizontal logo with positioning line for light backgrounds. |
+| `svg/fitkarma-wordmark-dark.svg` | SVG | Compact horizontal wordmark without tagline for condensed headers. |
+| `svg/fitkarma-wordmark-light.svg` | SVG | Compact light wordmark. |
+| `svg/fitkarma-mark.svg` | SVG | Standalone transparent running-figure symbol / favicon. |
+| `svg/fitkarma-app-icon-dark.svg` | SVG | App launcher icon on dark background. |
+| `svg/fitkarma-app-icon-light.svg` | SVG | App launcher icon on light background. |
+| `svg/fitkarma-monochrome-*.svg` | SVG | Monochrome single-color variants for print or high-contrast stamps. |
+| `png/...` | PNG | Corresponding raster assets for OpenGraph cards, web manifests, and previews. |
 
-Explore a distinctive abstract mark that combines ideas such as:
+## 4. Implementation Guidelines
 
-- connected health ecosystem / interconnected pathways;
-- balance, progress and everyday consistency;
-- a subtle pulse, orbit or circular motion;
-- a small reference to Indian identity through geometry or rhythm, not a cliché illustration.
-
-Do not simply combine a dumbbell, heart and leaf. Avoid generic medical crosses, stock ECG lines, cartoon bodies, religious symbols, excessive gradients and overused AI sparkles.
-
-## AI image-generation prompt for exploration
-
-“Create a premium, highly distinctive vector-style brand identity exploration for FitKarma, an India-first AI-powered Fitness and Wellness Ecosystem. Design a minimal abstract symbol that suggests connected wellbeing, personal progress, balance and intelligent guidance through a refined geometric orbit/path motif. Pair it with a clean, custom-feeling FitKarma wordmark. Futuristic but warm, precise, memorable at tiny favicon size, suitable for a premium mobile app and cinematic dark website. Explore a restrained electric-lime/emerald accent on near-black, with a monochrome option. Flat vector appearance, crisp silhouette, clean negative space, no mockup, no gradients that impair reproduction, no stock dumbbell/heart/medical-cross/ECG icon, no religious imagery, no extra tagline, no watermark.”
-
-Generate multiple distinct concept directions, then select one and redraw/refine as a proper vector (SVG/PDF) with human review. Image generation alone is not a substitute for a production-ready vector logo.
-
-## Approval checklist
-
-- Reads clearly as FitKarma at small sizes.
-- Does not look like an existing competitor or medical institution.
-- Works in monochrome and on light/dark backgrounds.
-- Can be reproduced in SVG and app launcher sizes.
-- Has a distinctive silhouette and legible wordmark.
-- Has been checked for similarity/trademark conflict before public use.
-- Owner explicitly approves the final artwork and palette.
+- In Next.js, copy or symlink assets from `FitKarma-Logo/svg/` into `public/brand/`.
+- Use `fitkarma-mark.svg` as the primary favicon and browser icon in `app/icon.svg`.
+- The floating dynamic glass pill navbar uses `fitkarma-wordmark-dark.svg` or `fitkarma-mark.svg` with dynamic hover glow.
+- When generating the VIP Beta Pass card, embed `fitkarma-mark.svg` as a holographic watermark.

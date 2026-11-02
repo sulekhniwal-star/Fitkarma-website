@@ -4,16 +4,22 @@
 
 ## 1. Data minimisation
 
-The beta website needs only enough information to verify an applicant, allocate a place, understand feature interest and communicate by email:
+The beta website collects only the essential parameters necessary to verify an applicant, allocate a sequential seat, understand product priorities, and deliver transactional notifications:
 
-- Name
+- Full Name
 - Email address
-- One selected feature priority
-- Optional device platform and preferred language
-- Notice/terms/consent versions and timestamps
-- Application and delivery status metadata
+- Primary Health Goals (high-level lifestyle wellness categories: *Weight Loss*, *Muscle Gain*, *Gut Health*, *Energy*, *Habit Consistency*)
+- Feature Priorities from the feature inventory (e.g. *Indian Nutrition*, *Daily Intelligence Package*, *Voice/Photo Logging*, *Health Sync*, *Family Wellness*)
+- Device platform (*iOS*, *Android*, *Both*) and preferred language (*en*, *hi*)
+- Notice/terms versions and timestamps
+- Transactional allocation order timestamp
 
-Do not collect health or medical information on the marketing site. Do not request phone numbers because the approved communication channel is email only.
+> [!IMPORTANT]
+> **Strict Clinical Separation:** High-level wellness goals are collected strictly as interest preferences for beta cohort planning. The marketing website **never** collects clinical records, diagnoses, prescription history, lab tests, bodily measurements, or medical conditions.
+
+### Social Sharing & VIP Pass Privacy
+- The downloadable/shareable **VIP Beta Pass** displays only the applicant's first name, sequential seat number (e.g. `VIP SEAT #0042`), and issue date.
+- Social share URLs (for WhatsApp and X) point to the public `/beta` or `/` landing page with an optional generic invite referral tag; they **never** include the applicant's email address, full legal name, private session token, or database UUID in query strings.
 
 ## 2. Notice, purpose and consent
 

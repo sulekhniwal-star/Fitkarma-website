@@ -10,13 +10,14 @@ The website is the public launch surface for explaining FitKarma, demonstrating 
 
 ## Primary objectives
 
-1. Explain the value of FitKarma clearly to Indian users.
-2. Show the product's differentiating capabilities with truthful availability labels.
-3. Convert visitors into verified Phase 1 beta applicants.
-4. Stop Phase 1 acceptance at exactly 1,000 places.
-5. Continue collecting Phase 2 waitlist applications after Phase 1 is full.
-6. Learn which features matter most through a minimal priority question.
-7. Give the owner a secure way to operate phases, view applications and send approved email campaigns/transactional notices.
+1. Explain the value of FitKarma clearly to Indian users through an immersive, motion-driven multi-page website (`/`, `/features`, `/about`, `/beta`, `/faq`).
+2. Show the product's differentiating capabilities with interactive simulators (Indian Meal Sandbox with roti/katori sliders, Daily Intelligence Package preview, AI food scanner).
+3. Convert visitors into verified Phase 1 beta applicants with a frictionless, high-converting registration flow.
+4. Stop Phase 1 acceptance at exactly 1,000 places using database-enforced atomic allocation.
+5. Provide newly verified applicants with an interactive, downloadable digital **VIP Beta Pass** card to drive viral sharing across WhatsApp and X.
+6. Continue collecting Phase 2 waitlist applications once the 1,000 Phase 1 places are filled.
+7. Collect high-level health goals and top feature priorities from applicants to inform progressive beta rollout cohorts.
+8. Give the owner a secure, MFA-protected admin console to manage phase capacities, monitor deliverability, and audit registrations.
 
 ## Audience from the master product brief
 

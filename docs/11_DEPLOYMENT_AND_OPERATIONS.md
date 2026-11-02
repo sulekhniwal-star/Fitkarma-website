@@ -43,13 +43,33 @@ Use a Vercel-provided preview address during development. Keep canonical URL, re
 - Database migrations should be backward-compatible where possible; use expand/contract for risky changes.
 - Keep rollback steps documented; database rollback may require a forward fix rather than destructive reversal.
 
-## 5. Secrets/configuration
+## 5. Secrets and Environment Schema
 
-- Maintain `.env.example` with variable names only.
-- Store secrets in the hosting/provider secret store.
-- Rotate credentials if exposed; do not paste them into agent conversations or commits.
-- Separate local, preview and production keys.
-- Restrict who can see production secrets.
+Maintain an up-to-date `.env.example` in the repository with the following schema:
+
+```bash
+# Public Client Variables
+NEXT_PUBLIC_APP_URL=https://fitkarma.in
+NEXT_PUBLIC_SUPABASE_URL=https://<your-project-ref>.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOi...
+
+# Server-Only Secrets (Never expose to client or client bundles)
+SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOi...
+RESEND_API_KEY=re_123456789...
+RESEND_FROM_EMAIL="FitKarma <beta@fitkarma.in>"
+
+# Admin Access Allowlist (Comma-separated admin emails)
+ADMIN_EMAIL_ALLOWLIST="sulekhniwal@gmail.com,admin@fitkarma.in"
+
+# Rate Limiting (Optional Upstash Redis for Edge rate limiting)
+UPSTASH_REDIS_REST_URL=https://...
+UPSTASH_REDIS_REST_TOKEN=...
+```
+
+- Store production keys exclusively in Vercel Environment Variables.
+- Separate development Supabase project from production Supabase project.
+- Production Resend sender domain (`fitkarma.in`) must have verified DKIM, SPF, and DMARC DNS records.
+- Rotate credentials immediately if accidentally exposed.
 
 ## 6. Operational dashboard
 

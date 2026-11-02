@@ -14,8 +14,21 @@ The current Antigravity documentation describes root-level `AGENTS.md`/`GEMINI.m
 - App Router: https://nextjs.org/docs/app
 - Getting started: https://nextjs.org/docs/app/getting-started
 - Deployment: https://nextjs.org/docs/app/getting-started/deploying
+- Dynamic OG Images: https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image
 
-Use the current App Router documentation, supported TypeScript setup and deployment guidance. Select current stable versions only after checking compatibility.
+## 3D, Motion & Graphics Stack
+
+- **React Three Fiber (R3F):** https://docs.pmnd.rs/react-three-fiber/getting-started/introduction
+- **Drei Component Helpers:** https://github.com/pmndrs/drei
+- **Postprocessing for R3F:** https://docs.pmnd.rs/react-postprocessing/introduction
+- **Motion (Framer Motion):** https://motion.dev/docs
+- **GSAP & ScrollTrigger:** https://gsap.com/docs/v3/Plugins/ScrollTrigger/
+- **Lenis Smooth Scroll:** https://github.com/darkroomengineering/lenis
+
+## Resend & Transactional Email
+
+- Resend Node.js / Next.js SDK: https://resend.com/docs/send-with-nextjs
+- React Email Components: https://react.email/docs/introduction
 
 ## Supabase
 
