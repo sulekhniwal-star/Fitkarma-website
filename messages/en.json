@@ -33,6 +33,66 @@
     "privacy": "Privacy Notice (DPDP)",
     "terms": "Beta Terms",
     "tagline": "Designed with precision for India."
+  },
+  "beta": {
+    "hero": {
+      "badge": "1,000-Seat Strictly Capped Cohort",
+      "title": "Claim Your VIP Beta Pass",
+      "subtitle": "Join India's first AI-powered fitness and wellness ecosystem. Strictly capped at 1,000 Phase 1 founding members."
+    },
+    "form": {
+      "step1_title": "Step 1 of 2: Your Profile",
+      "step2_title": "Step 2 of 2: Health Goals & Consent",
+      "name_label": "Full Name",
+      "name_placeholder": "e.g. Aarav Sharma",
+      "email_label": "Email Address",
+      "email_placeholder": "you@example.com",
+      "device_label": "Primary Smartphone Platform",
+      "device_ios": "iPhone (iOS)",
+      "device_android": "Android",
+      "device_both": "Both Platforms",
+      "goals_label": "What are your primary health goals? (Select at least 1)",
+      "goal_weight_loss": "Weight Loss",
+      "goal_muscle_gain": "Muscle Gain",
+      "goal_gut_health": "Gut Health & Digestion",
+      "goal_energy": "All-Day Energy",
+      "goal_habit_consistency": "Habit Consistency",
+      "features_label": "Which features are you most excited to test?",
+      "feature_indian_nutrition": "Indian Nutrition AI (Roti & Katori)",
+      "feature_dip_intelligence": "Daily Intelligence Package (DIP)",
+      "feature_photo_logging": "Instant Photo Meal Scanner",
+      "feature_voice_logging": "Hinglish Voice Food Logging",
+      "feature_health_sync": "Health Connect & Apple Health Sync",
+      "feature_family_wellness": "Family Wellness Circles",
+      "other_feature_label": "Any specific routine or health condition you'd like supported? (Optional)",
+      "other_feature_placeholder": "e.g. Vegetarian high-protein, PCOS diet management...",
+      "privacy_consent": "I have read and agree to the DPDP-compliant Privacy Notice and Terms of Service.",
+      "marketing_consent": "Send me early feature previews and health intelligence insights (optional).",
+      "next_button": "Next: Health Goals →",
+      "back_button": "← Back",
+      "submit_button": "Complete Registration & Claim Seat",
+      "submitting": "Securing your spot...",
+      "success_title": "Verification Link Dispatched!",
+      "success_description": "We have sent an authentication magic link to {email}. Click the link within 24 hours to claim your VIP Beta seat.",
+      "resend_button": "Resend Verification Link",
+      "resend_countdown": "Resend available in {seconds}s"
+    },
+    "pass": {
+      "download": "Download VIP Pass (PNG)",
+      "share_whatsapp": "Share on WhatsApp",
+      "share_x": "Share on X",
+      "copy_link": "Copy Referral Link",
+      "copied_toast": "Referral link copied to clipboard!",
+      "founding_badge": "FOUNDING VIP MEMBER",
+      "seat_label": "OFFICIAL VIP SEAT BADGE",
+      "drag_hint": "Drag to rotate in 3D"
+    },
+    "waitlist": {
+      "title": "You're on the Phase 2 Waitlist",
+      "subtitle": "All 1,000 Phase 1 VIP seats are allocated. You are in priority queue for automatic FIFO backfill when members withdraw.",
+      "queue_label": "Your Live Queue Position",
+      "promotion_notice": "Whenever an accepted Phase 1 seat is freed, the earliest waitlisted applicant is automatically promoted."
+    }
   }
 }
 
